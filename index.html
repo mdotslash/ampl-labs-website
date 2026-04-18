@@ -138,7 +138,7 @@
   }
 
   .hero-eyebrow {
-    font-size: 12px;
+    font-size: 18px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--accent);
@@ -148,7 +148,7 @@
 
   .hero-headline {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(64px, 11vw, 148px);
+    font-size: clamp(64px, 11vw, 100px);
     line-height: 0.92;
     letter-spacing: 0.02em;
     max-width: 980px;
@@ -259,33 +259,99 @@
   @keyframes scrollLogos { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
   .logo-item { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.38; white-space: nowrap; font-weight: 500; }
 
+  .
   .case-featured {
-    background: var(--card-bg); border: 1px solid var(--border);
-    display: grid; grid-template-columns: 1fr 1fr; min-height: 420px;
-    margin-top: 56px; cursor: pointer; transition: border-color 0.3s; position: relative;
-  }
-  .case-featured:hover { border-color: rgba(232,255,71,0.28); }
-  .case-featured-visual {
-    background: linear-gradient(135deg, rgba(232,255,71,0.04) 0%, rgba(100,60,200,0.08) 100%);
-    border-right: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.2;
-    min-height: 420px;
-    transition: opacity 0.4s ease;
-  }
-  .case-featured:hover .case-featured-visual { opacity: 1; }
-  .case-featured-content { padding: 48px; display: flex; flex-direction: column; justify-content: space-between; }
-  .case-featured-badge {
-    display: inline-block; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
-    background: var(--accent); color: var(--black); padding: 4px 10px; margin-bottom: 24px; font-weight: 500;
-  }
-  .case-featured-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(32px, 3.5vw, 52px); line-height: 1; letter-spacing: 0.02em; margin-bottom: 16px;
-  }
-  .case-featured-desc { font-size: 15px; line-height: 1.7; opacity: 0.6; }
-  .case-featured-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 24px; border-top: 1px solid var(--border); margin-top: 24px; }
-  .case-featured-year { font-size: 12px; letter-spacing: 0.06em; opacity: 0.3; }
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 420px;
+  margin-top: 56px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.case-featured::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(232,255,71,0.035) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+.case-featured:hover {
+  border-color: rgba(232,255,71,0.28);
+}
+
+.case-featured:hover::after {
+  opacity: 1;
+}
+
+.case-featured-visual {
+  background: linear-gradient(135deg, rgba(232,255,71,0.04) 0%, rgba(100,60,200,0.08) 100%);
+  border-right: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 1;
+  min-height: 420px;
+}
+
+.case-featured-content {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.case-featured-badge {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: var(--black);
+  padding: 4px 10px;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.case-featured-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(32px, 3.5vw, 52px);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+
+.case-featured-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  opacity: 0.6;
+}
+
+.case-featured-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  margin-top: 24px;
+}
+
+.case-featured-year {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  opacity: 0.3;
+}
+
   .case-cta-btn {
     font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
     color: var(--black); background: var(--accent); padding: 9px 18px;
@@ -493,7 +559,7 @@
 <!-- GDPR -->
 <div id="gdpr-banner" role="region" aria-label="Cookie consent">
   <p class="gdpr-text" id="gdpr-text">
-    <a href="./privacy.html" id="gdpr-privacy-link"></a>
+    <a href="/privacy.html" id="gdpr-privacy-link"></a>
   </p>
   <div class="gdpr-actions">
     <button class="gdpr-btn" onclick="dismissGDPR(false)" data-i18n="gdpr.decline"></button>
@@ -550,11 +616,11 @@
 <section id="hero">
   <div class="hero-bg">
     <div class="hero-slide active" style="background-image:url('images/hero.png')"></div>
+    
     <div class="hero-slide" style="background-image:url('images/hero2.png')"></div>
-
-    <!-- add more -->
-<!--   <div class="hero-slide" style="background-image:url('images/hero3.png')"></div>
-  <div class="hero-slide" style="background-image:url('images/hero4.png')"></div> -->
+    <div class="hero-slide" style="background-image:url('images/hero3.png')"></div>
+    <div class="hero-slide" style="background-image:url('images/hero4.png')"></div>
+    <div class="hero-slide" style="background-image:url('images/hero5.png')"></div>
   </div>
 
   <p class="hero-eyebrow" data-i18n="hero.eyebrow"></p>
@@ -753,7 +819,7 @@
           <textarea class="form-textarea" id="fmsg" name="message" required data-i18n-placeholder="contact.form.messagePlaceholder"></textarea>
         </div>
 
-        <p class="form-privacy"><span data-i18n="contact.form.privacy"></span> <a href="./privacy.html">privacy policy</a>.</p>
+        <p class="form-privacy"><span data-i18n="contact.form.privacy"></span> <a href="/privacy.html">privacy policy</a>.</p>
         <input type="hidden" name="_language" id="form-lang" value="en">
 
         <button class="btn-primary" type="submit" style="align-self:flex-start" data-i18n="contact.form.submit"></button>
@@ -782,8 +848,8 @@
     <li><a href="#about" data-i18n="footer.mission"></a></li>
     <li><a href="#work" data-i18n="footer.work"></a></li>
     <li><a href="#contact" data-i18n="footer.contact"></a></li>
-    <li><a href="./privacy.html" data-i18n="footer.privacy"></a></li>
-    <li><a href="./imprint.html" data-i18n="footer.imprint"></a></li>
+    <li><a href="/privacy.html" data-i18n="footer.privacy"></a></li>
+    <li><a href="/imprint.html" data-i18n="footer.imprint"></a></li>
   </ul>
   <span class="footer-copy" data-i18n="footer.copy"></span>
 </footer>
@@ -931,7 +997,7 @@ function renderGDPR(lang) {
   const parts = fullText.split(linkText);
 
   if (parts.length === 2) {
-    gdprText.innerHTML = `${parts[0]}<a href="./privacy.html" id="gdpr-privacy-link">${linkText}</a>${parts[1]}`;
+    gdprText.innerHTML = `${parts[0]}<a href="/privacy.html" id="gdpr-privacy-link">${linkText}</a>${parts[1]}`;
   } else {
     gdprText.textContent = fullText;
   }
@@ -1171,16 +1237,12 @@ function dismissGDPR(accepted) {
   
   const savedLang = localStorage.getItem('ampl-lang') || 'en';
   setLang(savedLang);
-  
+
   // text rotation
-  setTimeout(() => {
-    setInterval(cycleSlot, 3000);
-  }, 3000);
+  setInterval(cycleSlot, 3500);
 
   // hero image rotation
-  setTimeout(() => {
-  setInterval(cycleHeroSlides, 6000);
-  }, 6000);
+  setInterval(cycleHeroSlides, 7000);
 
   if (!localStorage.getItem('ampl-gdpr')) {
     setTimeout(() => document.getElementById('gdpr-banner').classList.add('visible'), 1400);
@@ -1196,7 +1258,6 @@ function dismissGDPR(accepted) {
   }, { threshold: 0.08 });
 
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
 })();
 
 // ─── CONTACT FORM ───
