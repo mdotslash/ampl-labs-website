@@ -6,6 +6,7 @@
 <title>AMPL Labs — Cultural Technology Studio</title>
 <meta name="description" content="AMPL Labs is a cultural technology studio building interactive experiences that protect artists, empower communities, and preserve cultural heritage.">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+
 <style>
   :root {
     --black: #0d0d0d;
@@ -153,29 +154,15 @@
     max-width: 980px;
   }
 
+  .hero-slot {
+    display: block;
+    color: var(--accent);
+  }
+
   .hero-slot-wrap {
     display: inline-block;
     overflow: hidden;
     vertical-align: bottom;
-  }
-
-  .hero-slot {
-    display: block;
-    color: var(--accent);
-    animation: slotCycle 9s steps(1) infinite;
-  }
-
-  @keyframes slotCycle {
-    0%   { opacity: 1; transform: translateY(0); }
-    28%  { opacity: 1; transform: translateY(0); }
-    33%  { opacity: 0; transform: translateY(-12px); }
-    38%  { opacity: 0; transform: translateY(12px); }
-    44%  { opacity: 1; transform: translateY(0); }
-    72%  { opacity: 1; transform: translateY(0); }
-    77%  { opacity: 0; transform: translateY(-12px); }
-    82%  { opacity: 0; transform: translateY(12px); }
-    88%  { opacity: 1; transform: translateY(0); }
-    100% { opacity: 1; transform: translateY(0); }
   }
 
   .hero-sub {
@@ -481,16 +468,13 @@
   .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
   .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-  [data-lang="en"] .de { display: none !important; }
-  [data-lang="de"] .en { display: none !important; }
-
   @media (max-width: 900px) {
     nav { padding: 16px 24px; }
     .nav-links { display: none; }
     #hero, .section, footer { padding-left: 24px; padding-right: 24px; }
     .mission-body-grid { grid-template-columns: 1fr; }
     .stats-row { grid-template-columns: 1fr 1fr; }
-    .contact-grid, .offerings-grid { grid-template-columns: 1fr; gap: 40px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; } 
     .case-featured { grid-template-columns: 1fr; }
     .case-featured-visual { min-height: 200px; border-right: none; border-bottom: 1px solid var(--border); }
     .cases-grid { grid-template-columns: 1fr; }
@@ -508,13 +492,12 @@
 
 <!-- GDPR -->
 <div id="gdpr-banner" role="region" aria-label="Cookie consent">
-  <p class="gdpr-text">
-    <span class="en">We use minimal analytics to understand how visitors find us. No tracking cookies, no advertising. By continuing you agree to our <a href="#">privacy policy</a>.</span>
-    <span class="de">Wir verwenden minimale Analysen. Keine Tracking-Cookies, keine Werbung. Durch die weitere Nutzung stimmen Sie unserer <a href="#">Datenschutzrichtlinie</a> zu.</span>
+  <p class="gdpr-text" id="gdpr-text">
+    <a href="/privacy.html" id="gdpr-privacy-link"></a>
   </p>
   <div class="gdpr-actions">
-    <button class="gdpr-btn" onclick="dismissGDPR(false)"><span class="en">Decline</span><span class="de">Ablehnen</span></button>
-    <button class="gdpr-btn accept" onclick="dismissGDPR(true)"><span class="en">Accept</span><span class="de">Akzeptieren</span></button>
+    <button class="gdpr-btn" onclick="dismissGDPR(false)" data-i18n="gdpr.decline"></button>
+    <button class="gdpr-btn accept" onclick="dismissGDPR(true)" data-i18n="gdpr.accept"></button>
   </div>
 </div>
 
@@ -522,8 +505,7 @@
 <div id="capture-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal()" aria-label="Close">×</button>
-    <div class="modal-label en">Case Study</div>
-    <div class="modal-label de">Fallstudie</div>
+    <div class="modal-label" data-i18n="modal.caseStudyLabel"></div>
 
     <!-- Dynamic case study content gets injected here -->
     <h2 class="modal-title" id="modal-title">Get the full case study.</h2>
@@ -542,10 +524,7 @@
       <input type="hidden" name="case_study_id" id="case-study-id" value="">
       <input type="hidden" name="_language" id="modal-lang" value="en">
 
-      <button class="btn-primary" type="submit" style="align-self:flex-start">
-        <span class="en">Email me this case study</span>
-        <span class="de">Diese Fallstudie per E-Mail senden</span>
-      </button>
+      <button class="btn-primary" type="submit" style="align-self:flex-start" data-i18n="modal.submit"></button>
       <div id="modal-status"></div>
     </form>
   </div>
@@ -554,17 +533,17 @@
 <nav>
   <div class="nav-logo">AMPL Labs</div>
   <ul class="nav-links">
-    <li><a href="#about"><span class="en">Mission</span><span class="de">Mission</span></a></li>
-    <li><a href="#partners"><span class="en">Partners</span><span class="de">Partner</span></a></li>
-    <li><a href="#work"><span class="en">Work</span><span class="de">Projekte</span></a></li>
-    <li><a href="#contact"><span class="en">Contact</span><span class="de">Kontakt</span></a></li>
+    <li><a href="#about" data-i18n="nav.mission"></a></li>
+    <li><a href="#partners" data-i18n="nav.partners"></a></li>
+    <li><a href="#work" data-i18n="nav.work"></a></li>
+    <li><a href="#contact" data-i18n="nav.contact"></a></li>
   </ul>
   <div style="display:flex;align-items:center;gap:12px;flex-shrink:0">
     <div id="lang-toggle" role="group" aria-label="Language">
       <button class="lang-btn active" onclick="setLang('en')">EN</button>
       <button class="lang-btn" onclick="setLang('de')">DE</button>
     </div>
-    <a href="#contact" class="nav-cta"><span class="en">Get in touch</span><span class="de">Kontakt</span></a>
+    <a href="#contact" class="nav-cta" data-i18n="nav.cta"></a>
   </div>
 </nav>
 
@@ -572,84 +551,39 @@
   <div class="hero-bg">
     <div class="hero-slide active" style="background-image:url('images/hero.png')"></div>
     <div class="hero-slide" style="background-image:url('images/hero2.png')"></div>
+
+    <!-- add more -->
+<!--   <div class="hero-slide" style="background-image:url('images/hero3.png')"></div>
+  <div class="hero-slide" style="background-image:url('images/hero4.png')"></div> -->
   </div>
-  <p class="hero-eyebrow en">Cultural Technology</p>
-  <p class="hero-eyebrow de">Kulturelle Technologie</p>
-  <h1 class="hero-headline en">
-    For a future<br>where <span class="hero-slot-wrap"><span class="hero-slot" id="hero-slot-en">communities win.</span></span>
+
+  <p class="hero-eyebrow" data-i18n="hero.eyebrow"></p>
+
+  <h1 class="hero-headline">
+    <span data-i18n-html="hero.headlinePrefix"></span><span class="hero-slot-wrap"><span class="hero-slot" id="hero-slot"></span></span>
   </h1>
-  <h1 class="hero-headline de">
-    Für eine Zukunft,<br>in der <span class="hero-slot-wrap"><span class="hero-slot" id="hero-slot-de">Gemeinschaften gewinnen.</span></span>
-  </h1>
-  <p class="hero-sub en">A small seed that grows in the dark. We make technology that works for communities — not against them. The future doesn't have to be built by the wrong people.</p>
-  <p class="hero-sub de">Ein kleiner Samen, der im Dunkeln wächst. Wir schaffen Technologie, die für Gemeinschaften arbeitet — nicht gegen sie.</p>
+
+  <p class="hero-sub" data-i18n="hero.sub"></p>
+
   <div class="hero-actions">
-    <a href="#work" class="btn-primary en">See our work</a>
-    <a href="#work" class="btn-primary de">Unsere Projekte</a>
-    <a href="#contact" class="btn-secondary en">Get in touch</a>
-    <a href="#contact" class="btn-secondary de">Kontakt aufnehmen</a>
+    <a href="#work" class="btn-primary" data-i18n="hero.primaryCta"></a>
+    <a href="#contact" class="btn-secondary" data-i18n="hero.secondaryCta"></a>
   </div>
 </section>
 
 <section id="about" class="section">
-  <div class="section-label en">Mission</div>
-  <div class="section-label de">Mission</div>
-  <p class="mission-statement fade-up en">
-    We don't have<br>a mission statement.<br>We have a <em>purpose.</em>
-  </p>
-  <p class="mission-statement fade-up de">
-    Wir haben keine<br>Missionserklärung.<br>Wir haben einen <em>Zweck.</em>
-  </p>
-  <div class="mission-body-grid">
-    <div class="fade-up">
-      <div class="mission-col-head en">What we believe</div>
-      <div class="mission-col-head de">Woran wir glauben</div>
-      <p class="mission-col-body en">Play connects and heals community. Cultural heritage belongs to the people who made it — not the institutions that acquired it. Technology should be an unfair advantage for the people the system is designed to ignore.</p>
-      <p class="mission-col-body de">Spiel verbindet und heilt Gemeinschaft. Kulturerbe gehört den Menschen, die es geschaffen haben. Technologie sollte ein Vorteil für diejenigen sein, die das System ignoriert.</p>
-    </div>
-    <div class="fade-up">
-      <div class="mission-col-head en">Who we're for</div>
-      <div class="mission-col-head de">Für wen wir arbeiten</div>
-      <p class="mission-col-body en">Optimists who are hungry for a better future that works for everyone. Museums ready to decolonize their collections. Communities who want to own their own stories. Artists who shouldn't have to choose between survival and integrity.</p>
-      <p class="mission-col-body de">Optimisten, die eine bessere Zukunft wollen. Museen, die ihre Sammlungen dekolonisieren wollen. Gemeinschaften, die ihre eigenen Geschichten besitzen wollen.</p>
-    </div>
-    <div class="fade-up">
-      <div class="mission-col-head en">How we show up</div>
-      <div class="mission-col-head de">Wie wir arbeiten</div>
-      <p class="mission-col-body en">We co-design with communities before we write a single line of code. We publish our source files. We give credit. As a UNESCO partner we've worked across the US, Germany, Nigeria, and Indonesia — and we don't extract from the places we work in.</p>
-      <p class="mission-col-body de">Wir ko-designen mit Gemeinschaften, bevor wir eine Zeile Code schreiben. Wir veröffentlichen unsere Quelldateien. Als UNESCO-Partner in den USA, Deutschland, Nigeria und Indonesien tätig.</p>
-    </div>
-  </div>
+  <div class="section-label" data-i18n="about.sectionLabel"></div>
+
+  <p class="mission-statement fade-up" data-i18n-html="about.statement"></p>
+
+  <div class="mission-body-grid" id="about-columns"></div>
 </section>
 
 <section id="partners" class="section">
-  <div class="section-label en">Who we work with</div>
-  <div class="section-label de">Mit wem wir arbeiten</div>
-  <h2 class="section-headline fade-up en">Some companies have clients.<br>We have collaborators.</h2>
-  <h2 class="section-headline fade-up de">Manche haben Kunden.<br>Wir haben Mitgestalter.</h2>
+  <div class="section-label" data-i18n="partners.sectionLabel"></div>
+  <h2 class="section-headline fade-up" data-i18n-html="partners.headline"></h2>
 
-  <div class="stats-row fade-up" style="margin-top:56px">
-    <div class="stat-block">
-      <div class="stat-number">100%</div>
-      <div class="stat-label en">Of QueerenciaNM participants were LGBTQ+ youth from rural NM</div>
-      <div class="stat-label de">Der QueerenciaNM-Teilnehmenden waren LGBTQ+-Jugendliche aus dem ländlichen NM</div>
-    </div>
-    <div class="stat-block">
-      <div class="stat-number">122K</div>
-      <div class="stat-label en">AR filter impressions in 30 days. Zero paid promotion.</div>
-      <div class="stat-label de">AR-Filter-Impressionen in 30 Tagen. Ohne Werbung.</div>
-    </div>
-    <div class="stat-block">
-      <div class="stat-number">$200K</div>
-      <div class="stat-label en">Saved annually by each museum using SammelSucht vs. existing tools</div>
-      <div class="stat-label de">Jährliche Einsparungen je Museum durch SammelSucht</div>
-    </div>
-    <div class="stat-block">
-      <div class="stat-number">0</div>
-      <div class="stat-label en">Benin Bronze scans locked behind a paywall. All open-licensed.</div>
-      <div class="stat-label de">Benin-Bronze-Scans hinter einer Bezahlschranke. Alle offen lizenziert.</div>
-    </div>
-  </div>
+  <div class="stats-row" id="partners-stats" style="margin-top:56px"></div>
 
   <div class="logo-scroll-track fade-up">
     <div class="logo-scroll" id="logo-scroll">
@@ -686,10 +620,8 @@
 </section>
 
 <section id="work" class="section">
-  <div class="section-label en">Case Studies</div>
-  <div class="section-label de">Fallstudien</div>
-  <h2 class="section-headline fade-up en">Work that moves culture forward.</h2>
-  <h2 class="section-headline fade-up de">Arbeit, die Kultur voranbringt.</h2>
+  <div class="section-label" data-i18n="work.sectionLabel"></div>
+  <h2 class="section-headline fade-up" data-i18n="work.headline"></h2>
 
   <!--
     Each clickable case-study card now passes a specific caseStudyId to the modal.
@@ -698,116 +630,81 @@
     - sammelsucht
     - loot-merch
   -->
+
   <div class="case-featured fade-up" onclick="openModal(null, 'queerencia')">
     <div class="case-featured-visual">
-      <img src="images/queerhero_featured.png" alt="QueerenciaNM × Queer Icons" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <img id="featured-case-image" src="" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">
     </div>
     <div class="case-featured-content">
       <div>
-        <div class="case-featured-badge en">Featured</div>
-        <div class="case-featured-badge de">Highlight</div>
-        <div class="case-tags" style="margin-top:0">
-          <span class="case-tag en">LGBTQ+ Youth</span><span class="case-tag de">LGBTQ+ Jugend</span>
-          <span class="case-tag">AR</span>
-          <span class="case-tag en">Arts Therapy</span><span class="case-tag de">Kunsttherapie</span>
-          <span class="case-tag">2024</span>
-        </div>
-        <h3 class="case-featured-title">QueerenciaNM × Queer Icons</h3>
-        <p class="case-featured-desc en">Art therapy and AR photobooth for rural LGBTQ+ youth in New Mexico. Co-designed with UNM, Moving Arts, and artist Gabriel García Román. Youth created multimedia self-portraits celebrated at public gallery openings statewide.</p>
-        <p class="case-featured-desc de">Kunsttherapie und AR-Fotokabine für LGBTQ+-Jugendliche im ländlichen New Mexico. Mitgestaltet mit UNM, Moving Arts und Künstler Gabriel García Román.</p>
+        <div class="case-featured-badge" id="featured-case-badge"></div>
+        <div class="case-tags" id="featured-case-tags" style="margin-top:0"></div>
+        <h3 class="case-featured-title" id="featured-case-title"></h3>
+        <p class="case-featured-desc" id="featured-case-desc"></p>
       </div>
       <div class="case-featured-footer">
-        <span class="case-featured-year en">2024 · Santa Fe, NM · UNM + NIH Partners</span>
-        <span class="case-featured-year de">2024 · Santa Fe, NM</span>
-        <button class="case-cta-btn" onclick="openModal(event, 'queerencia')">
-          <span class="en">Get the case study</span>
-          <span class="de">Fallstudie anfordern</span>
-        </button>
+        <span class="case-featured-year" id="featured-case-year"></span>
+        <button class="case-cta-btn" onclick="openModal(event, 'queerencia')" id="featured-case-cta"></button>
       </div>
     </div>
   </div>
 
-  <div class="cases-grid">
-    <div class="case-card s6 fade-up" onclick="openModal(null, 'sammelsucht')">
-      <div>
-        <div class="case-num">02</div>
-        <div class="case-tags">
-          <span class="case-tag en">Museum Tech</span><span class="case-tag de">Museumstechnologie</span>
-          <span class="case-tag">AR / 3D</span>
-        </div>
-        <h3 class="case-title">Collecting Crave / SammelSucht</h3>
-        <p class="case-desc en">"Pokémon Go for art." Mobile AR app letting museums showcase hidden collections. Frankfurt World Culture Museum + Berlin State Museums. Saves up to $200K/yr.</p>
-        <p class="case-desc de">"Pokémon Go für Kunst." AR-App für Museen. Spart bis zu 200.000 $/Jahr.</p>
-      </div>
-      <div class="case-footer">
-        <span class="case-year">Frankfurt · Berlin</span>
-        <button class="case-get-btn" onclick="openModal(event, 'sammelsucht')"><span class="en">Get case study</span><span class="de">Anfragen</span></button>
-      </div>
+  <div class="case-card s6 fade-up" onclick="openModal(null, 'sammelsucht')">
+    <div>
+      <div class="case-num">02</div>
+      <div class="case-tags" id="card-sammelsucht-tags"></div>
+      <h3 class="case-title" id="card-sammelsucht-title"></h3>
+      <p class="case-desc" id="card-sammelsucht-desc"></p>
     </div>
-
-    <div class="case-card s6 fade-up" onclick="openModal(null, 'loot-merch')">
-      <div>
-        <div class="case-num">03</div>
-        <div class="case-tags">
-          <span class="case-tag">Mozilla Award 2021</span>
-          <span class="case-tag">Open Source</span>
-        </div>
-        <h3 class="case-title">Loot Co</h3>
-        <p class="case-desc en">We digitally pirated and open-sourced the Benin Bronzes using 3D scanning, GAN modeling, and social AR. A provocation about who owns cultural heritage.</p>
-        <p class="case-desc de">Wir digitalisierten und open-sourceten die Benin-Bronzen. Eine Provokation über den Besitz von Kulturerbe.</p>
-      </div>
-      <div class="case-footer">
-        <span class="case-year">2021 · Mozilla Creative Media Award</span>
-        <button class="case-get-btn" onclick="openModal(event, 'loot-merch')"><span class="en">Get case study</span><span class="de">Anfragen</span></button>
-      </div>
-    </div>
-
-    <!--
-      This workshop card is no longer wired into the case-study modal because
-      there is no matching Apps Script caseStudyId yet. Leave it as a contact/
-      sales path for now instead of sending a broken request.
-    -->
-    <div class="case-card s12 fade-up" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
-      <div>
-        <div class="case-num">04</div>
-        <div class="case-tags">
-          <span class="case-tag">3D Scanning</span>
-          <span class="case-tag en">Cultural Archiving</span><span class="case-tag de">Kulturarchivierung</span>
-          <span class="case-tag en">Workshop</span><span class="case-tag de">Workshop</span>
-        </div>
-        <h3 class="case-title en">3D Scanning & Cultural Archiving Workshop</h3>
-        <h3 class="case-title de">3D-Scanning & Kulturarchivierungs-Workshop</h3>
-        <p class="case-desc en">Hands-on intensive for cultural institutions, educators, and communities. Participants learn to digitize, archive, and reactivate cultural objects using photogrammetry, AR, and open-source tools — developed from a decade of field work across four continents.</p>
-        <p class="case-desc de">Praxisintensiv für Kulturinstitutionen, Pädagogen und Gemeinschaften. Photogrammetrie, AR und Open-Source-Tools — entwickelt aus einem Jahrzehnt Feldarbeit auf vier Kontinenten.</p>
-      </div>
-      <div class="case-footer">
-        <span class="case-year en">From $3,000 · Available globally</span>
-        <span class="case-year de">Ab 3.000 $ · Weltweit verfügbar</span>
-        <button class="case-get-btn" onclick="event.stopPropagation(); document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })"><span class="en">Contact us</span><span class="de">Kontakt</span></button>
-      </div>
+    <div class="case-footer">
+      <span class="case-year" id="card-sammelsucht-year"></span>
+      <button class="case-get-btn" onclick="openModal(event, 'sammelsucht')" id="card-sammelsucht-cta"></button>
     </div>
   </div>
+
+  <div class="case-card s6 fade-up" onclick="openModal(null, 'loot-merch')">
+    <div>
+      <div class="case-num">03</div>
+      <div class="case-tags" id="card-loot-merch-tags"></div>
+      <h3 class="case-title" id="card-loot-merch-title"></h3>
+      <p class="case-desc" id="card-loot-merch-desc"></p>
+    </div>
+    <div class="case-footer">
+      <span class="case-year" id="card-loot-merch-year"></span>
+      <button class="case-get-btn" onclick="openModal(event, 'loot-merch')" id="card-loot-merch-cta"></button>
+    </div>
+  </div>
+
+  <!--
+    This workshop card is no longer wired into the case-study modal because
+    there is no matching Apps Script caseStudyId yet. Leave it as a contact/
+    sales path for now instead of sending a broken request.
+  -->
+  <div class="case-card s12 fade-up" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
+    <div>
+      <div class="case-num">04</div>
+      <div class="case-tags" id="card-workshop-tags"></div>
+      <h3 class="case-title" id="card-workshop-title"></h3>
+      <p class="case-desc" id="card-workshop-desc"></p>
+    </div>
+    <div class="case-footer">
+      <span class="case-year" id="card-workshop-year"></span>
+      <button class="case-get-btn" onclick="event.stopPropagation(); document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })" id="card-workshop-cta"></button>
+    </div>
+  </div>
+
 </section>
 
 <section id="contact" class="section">
-  <div class="section-label en">Contact</div>
-  <div class="section-label de">Kontakt</div>
+  <div class="section-label" data-i18n="contact.sectionLabel"></div>
   <div class="contact-grid">
     <div>
-      <h2 class="section-headline fade-up en">Let's build<br>something.</h2>
-      <h2 class="section-headline fade-up de">Lass uns etwas<br>aufbauen.</h2>
-      <p class="contact-lede en fade-up">We work with cultural organizations, museums, festivals, universities, and mission-aligned companies. If that's you — let's talk. No pitch decks required.</p>
-      <p class="contact-lede de fade-up">Wir arbeiten mit Kulturorganisationen, Museen, Festivals, Universitäten und werteorientierten Unternehmen. Wenn das auf Sie zutrifft — melden Sie sich.</p>
+      <h2 class="section-headline fade-up" data-i18n-html="contact.headline"></h2>
+      <p class="contact-lede fade-up" data-i18n="contact.lede"></p>
       <div class="contact-detail fade-up">
-        <!-- <div class="contact-item">
-          <span class="contact-item-label">Website</span>
-          <span class="contact-item-value">amplelabs.fun</span>
-        </div> -->
         <div class="contact-item">
-          <span class="contact-item-label en">Based in</span>
-          <span class="contact-item-label de">Standort</span>
-          <span class="contact-item-value en">New Mexico, USA · Global</span>
-          <span class="contact-item-value de">New Mexico, USA · Weltweit</span>
+          <span class="contact-item-label" data-i18n="contact.basedInLabel"></span>
+          <span class="contact-item-value" data-i18n="contact.basedInValue"></span>
         </div>
       </div>
     </div>
@@ -822,47 +719,45 @@
         novalidate
       >
         <input type="text" name="website" style="display:none">
+
         <div class="form-row">
           <div class="form-group">
-            <label class="form-label en" for="fname">Name</label>
-            <label class="form-label de" for="fname">Name</label>
-            <input class="form-input" type="text" id="fname" name="name" required placeholder="Jane Smith">
+            <label class="form-label" for="fname" data-i18n="contact.form.nameLabel"></label>
+            <input class="form-input" type="text" id="fname" name="name" required data-i18n-placeholder="contact.form.namePlaceholder">
           </div>
           <div class="form-group">
-            <label class="form-label en" for="forg">Organization</label>
-            <label class="form-label de" for="forg">Organisation</label>
-            <input class="form-input" type="text" id="forg" name="organization" placeholder="Museum / Org / Studio">
+            <label class="form-label" for="forg" data-i18n="contact.form.organizationLabel"></label>
+            <input class="form-input" type="text" id="forg" name="organization" data-i18n-placeholder="contact.form.organizationPlaceholder">
           </div>
         </div>
+
         <div class="form-group">
-          <label class="form-label en" for="femail">Email</label>
-          <label class="form-label de" for="femail">E-Mail</label>
-          <input class="form-input" type="email" id="femail" name="email" required placeholder="you@example.com">
+          <label class="form-label" for="femail" data-i18n="contact.form.emailLabel"></label>
+          <input class="form-input" type="email" id="femail" name="email" required data-i18n-placeholder="contact.form.emailPlaceholder">
         </div>
+
         <div class="form-group">
-          <label class="form-label en" for="ftype">Type of inquiry</label>
-          <label class="form-label de" for="ftype">Art der Anfrage</label>
+          <label class="form-label" for="ftype" data-i18n="contact.form.inquiryTypeLabel"></label>
           <select class="form-select" id="ftype" name="inquiry_type">
             <option value="" disabled selected>—</option>
-            <option value="commission" data-en="Commission / New project" data-de="Auftrag / Neues Projekt"></option>
-            <option value="workshop" data-en="Book a workshop" data-de="Workshop buchen"></option>
-            <option value="speaking" data-en="Speaking / Consulting" data-de="Vortrag / Beratung"></option>
-            <option value="press" data-en="Press / Media" data-de="Presse / Medien"></option>
-            <option value="other" data-en="Other" data-de="Sonstiges"></option>
+            <option value="commission"></option>
+            <option value="workshop"></option>
+            <option value="speaking"></option>
+            <option value="press"></option>
+            <option value="other"></option>
           </select>
         </div>
+
         <div class="form-group">
-          <label class="form-label en" for="fmsg">Message</label>
-          <label class="form-label de" for="fmsg">Nachricht</label>
-          <textarea class="form-textarea" id="fmsg" name="message" required placeholder="Tell us about your project..."></textarea>
+          <label class="form-label" for="fmsg" data-i18n="contact.form.messageLabel"></label>
+          <textarea class="form-textarea" id="fmsg" name="message" required data-i18n-placeholder="contact.form.messagePlaceholder"></textarea>
         </div>
-        <p class="form-privacy en">Your data is used only to respond to your inquiry and is never sold or shared. By submitting you agree to our <a href="#">privacy policy</a>.</p>
-        <p class="form-privacy de">Ihre Daten werden nur zur Beantwortung Ihrer Anfrage verwendet. Durch das Absenden stimmen Sie unserer <a href="#">Datenschutzrichtlinie</a> zu.</p>
+
+        <p class="form-privacy"><span data-i18n="contact.form.privacy"></span> <a href="/privacy.html">privacy policy</a>.</p>
         <input type="hidden" name="_language" id="form-lang" value="en">
-        <button class="btn-primary" type="submit" style="align-self:flex-start">
-          <span class="en">Send message</span><span class="de">Nachricht senden</span>
-        </button>
-        <div id="form-status"></div>
+
+        <button class="btn-primary" type="submit" style="align-self:flex-start" data-i18n="contact.form.submit"></button>
+        <div id="form-status"></div>  
       </form>
     </div>
   </div>
@@ -870,179 +765,248 @@
 
 <section id="newsletter" class="fade-up">
   <div class="newsletter-copy">
-    <strong class="en">Get the occasional dispatch.</strong>
-    <strong class="de">Den gelegentlichen Newsletter erhalten.</strong>
-    <span class="en">New projects, open-source drops, workshop dates. We don't send much — but when we do, it's worth it.</span>
-    <span class="de">Neue Projekte, Open-Source-Releases, Workshop-Termine. Wir schreiben selten — aber dann lohnt es sich.</span>
+    <strong data-i18n="newsletter.title"></strong>
+    <span data-i18n="newsletter.body"></span>
   </div>
   <form class="newsletter-form" action="https://buttondown.com/api/emails/embed-subscribe/mayowa" method="post" target="_blank">
-  
     <input type="hidden" name="tag" value="website-signup">
     <input type="hidden" name="embed" value="1">
-
-    <input
-      class="newsletter-input"
-      type="email"
-      name="email"
-      placeholder="your@email.com"
-      required
-    >
-
-    <button class="newsletter-submit" type="submit">
-      <span class="en">Subscribe</span>
-      <span class="de">Abonnieren</span>
-    </button>
+    <input class="newsletter-input" type="email" name="email" required data-i18n-placeholder="newsletter.placeholder">
+    <button class="newsletter-submit" type="submit" data-i18n="newsletter.submit"></button>
   </form>
-
 </section>
 
 <footer>
   <div class="footer-logo">AMPL Labs</div>
   <ul class="footer-links">
-    <li><a href="#about"><span class="en">Mission</span><span class="de">Mission</span></a></li>
-    <li><a href="#work"><span class="en">Work</span><span class="de">Projekte</span></a></li>
-    <li><a href="#contact"><span class="en">Contact</span><span class="de">Kontakt</span></a></li>
-    <li><a href="#"><span class="en">Privacy Policy</span><span class="de">Datenschutz</span></a></li>
-    <li><a href="#"><span class="en">Imprint</span><span class="de">Impressum</span></a></li>
+    <li><a href="#about" data-i18n="footer.mission"></a></li>
+    <li><a href="#work" data-i18n="footer.work"></a></li>
+    <li><a href="#contact" data-i18n="footer.contact"></a></li>
+    <li><a href="/privacy.html" data-i18n="footer.privacy"></a></li>
+    <li><a href="/imprint.html" data-i18n="footer.imprint"></a></li>
   </ul>
-  <span class="footer-copy">© 2025 AMPL Labs · amplelabs.fun</span>
+  <span class="footer-copy" data-i18n="footer.copy"></span>
 </footer>
 
 <script>
+
+// ─── LANGUAGE LOADER ─── 
+
+let SITE_CONTENT = null;
+
+async function loadContent() {
+  const res = await fetch('content/content.json');
+  if (!res.ok) throw new Error('Failed to load content.json');
+  SITE_CONTENT = await res.json();
+}
+
+function getContentValue(obj, path, lang) {
+  const value = path.split('.').reduce((acc, key) => acc && acc[key], obj);
+  if (!value) return '';
+  if (typeof value === 'string') return value;
+  return value[lang] ?? value.en ?? '';
+}
+
+function applyContent(lang) {
+  if (!SITE_CONTENT) return;
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    el.textContent = getContentValue(SITE_CONTENT, key, lang);
+  });
+
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.dataset.i18nHtml;
+    el.innerHTML = getContentValue(SITE_CONTENT, key, lang);
+  });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.dataset.i18nPlaceholder;
+    el.placeholder = getContentValue(SITE_CONTENT, key, lang);
+  });
+}
+
+function renderAboutColumns(lang) {
+  const container = document.getElementById('about-columns');
+  if (!container || !SITE_CONTENT?.about?.columns) return;
+
+  container.innerHTML = SITE_CONTENT.about.columns.map(col => `
+    <div>
+      <div class="mission-col-head">
+        ${col.head[lang] || col.head.en}
+      </div>
+      <p class="mission-col-body">
+        ${col.body[lang] || col.body.en}
+      </p>
+    </div>
+  `).join('');
+}
+
+function renderPartnerStats(lang) {
+  const container = document.getElementById('partners-stats');
+  if (!container || !SITE_CONTENT?.partners?.stats) return;
+
+  container.innerHTML = SITE_CONTENT.partners.stats.map(stat => `
+    <div class="stat-block">
+      <div class="stat-number">${stat.number}</div>
+      <div class="stat-label">
+        ${stat.label[lang] || stat.label.en}
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderCaseStudyCards(lang) {
+  const cases = SITE_CONTENT?.caseStudies;
+  if (!cases) return;
+
+  const renderTags = (containerId, tags) => {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    container.innerHTML = tags.map(tag => `<span class="case-tag">${tag}</span>`).join('');
+  };
+
+  // Featured: queerencia
+  const featured = cases.queerencia;
+  if (featured) {
+    const featuredImage = document.getElementById('featured-case-image');
+    if (featuredImage) {
+      featuredImage.src = featured.featuredImage;
+      featuredImage.alt = featured.title[lang] || featured.title.en;
+    }
+
+    const badge = document.getElementById('featured-case-badge');
+    if (badge) badge.textContent = featured.featured.badge[lang] || featured.featured.badge.en;
+
+    renderTags('featured-case-tags', featured.featured.tags[lang] || featured.featured.tags.en);
+
+    const title = document.getElementById('featured-case-title');
+    if (title) title.textContent = featured.title[lang] || featured.title.en;
+
+    const desc = document.getElementById('featured-case-desc');
+    if (desc) desc.textContent = featured.featured.desc[lang] || featured.featured.desc.en;
+
+    const year = document.getElementById('featured-case-year');
+    if (year) year.textContent = featured.featured.year[lang] || featured.featured.year.en;
+
+    const cta = document.getElementById('featured-case-cta');
+    if (cta) cta.textContent = featured.featured.cta[lang] || featured.featured.cta.en;
+  }
+
+  const renderStandardCard = (key) => {
+    const item = cases[key];
+    if (!item || !item.card) return;
+
+    renderTags(`card-${key}-tags`, item.card.tags[lang] || item.card.tags.en);
+
+    const title = document.getElementById(`card-${key}-title`);
+    if (title) title.textContent = item.title[lang] || item.title.en;
+
+    const desc = document.getElementById(`card-${key}-desc`);
+    if (desc) desc.textContent = item.card.desc[lang] || item.card.desc.en;
+
+    const year = document.getElementById(`card-${key}-year`);
+    if (year) year.textContent = item.card.year[lang] || item.card.year.en;
+
+    const cta = document.getElementById(`card-${key}-cta`);
+    if (cta) cta.textContent = item.card.cta[lang] || item.card.cta.en;
+  };
+
+  renderStandardCard('sammelsucht');
+  renderStandardCard('loot-merch');
+  renderStandardCard('workshop');
+}
+
+function renderGDPR(lang) {
+  const gdprText = document.getElementById('gdpr-text');
+  const gdprLink = document.getElementById('gdpr-privacy-link');
+
+  if (!gdprText || !gdprLink || !SITE_CONTENT?.gdpr) return;
+
+  const fullText = getContentValue(SITE_CONTENT, 'gdpr.text', lang);
+  const linkText = getContentValue(SITE_CONTENT, 'gdpr.privacyLink', lang);
+
+  if (!fullText || !linkText) return;
+
+  const parts = fullText.split(linkText);
+
+  if (parts.length === 2) {
+    gdprText.innerHTML = `${parts[0]}<a href="/privacy.html" id="gdpr-privacy-link">${linkText}</a>${parts[1]}`;
+  } else {
+    gdprText.textContent = fullText;
+  }
+}
+
+function renderInquiryOptions(lang) {
+  const select = document.getElementById('ftype');
+  const options = SITE_CONTENT?.contact?.form?.options;
+  if (!select || !options) return;
+
+  [...select.querySelectorAll('option[value]')].forEach(option => {
+    const key = option.value;
+    if (!key || !options[key]) return;
+    option.textContent = options[key][lang] || options[key].en;
+  });
+}
+
 // ─── CONFIG ───
 const LEAD_ENDPOINT = "https://script.google.com/macros/s/AKfycbzhaSsfa9nWOj_YjVoOv4tMkveCgW7Qz7CBg9acKz2KOyTOuAFwCpBFsuWWX2FOi3j3/exec";
 
 // Frontend modal content. This is intentionally separate from the Apps Script
 // CASE_STUDIES map because the frontend needs language-specific copy and images.
-const CASE_STUDY_CONTENT = {
-  queerencia: {
-    title: {
-      en: "QueerenciaNM × Queer Icons",
-      de: "QueerenciaNM × Queer Icons"
-    },
-    desc: {
-      en: "A quick look at how this project blends public art, mixed reality, and community storytelling.",
-      de: "Ein kurzer Einblick, wie dieses Projekt öffentliche Kunst, Mixed Reality und Community Storytelling verbindet."
-    },
-    image: "images/case-queerencia.png",
-    bullets: {
-      en: [
-        "'Animating archives' through a statewide QTPOC+ youth art program",
-        "Blending art and mixed reality to preserve intergenerational LGBTQ+ stories",
-        "Co-created with artists, community partners, and NIH-supported collaborators"
-      ],
-      de: [
-        "'Archive animieren' durch ein landesweites Kunstprogramm für QTPOC+ Jugendliche",
-        "Kunst und Mixed Reality verbinden, um generationenübergreifende LGBTQ+-Geschichten zu bewahren",
-        "Gemeinsam entwickelt mit Künstler:innen, Community-Partnern und NIH-unterstützten Mitwirkenden"
-      ]
-    }
-  },
-  sammelsucht: {
-    title: {
-      en: "Collecting Crave / SammelSucht",
-      de: "Collecting Crave / SammelSucht"
-    },
-    desc: {
-      en: "How we turned hidden museum collections into a playful AR experience.",
-      de: "Wie wir verborgene Museumssammlungen in ein spielerisches AR-Erlebnis verwandelt haben."
-    },
-    image: "images/case-sammelsucht.png",
-    bullets: {
-      en: [
-        "'Pokémon Go for art' - turns museum collections into playable AR experiences",
-        "Brings 95% of hidden museum archives into public view",
-        "Built and tested with leading institutions across the US and Europe"
-      ],
-      de: [
-        "'Pokémon Go für Kunst' – macht Museumssammlungen zu spielbaren AR-Erlebnissen",
-        "Bringt 95 % verborgener Museumsarchive in die Öffentlichkeit",
-        "Entwickelt und erprobt mit führenden Institutionen in den USA und Europa"
-      ]
-    }
-  },
-  'loot-merch': {
-    title: {
-      en: "Loot Co",
-      de: "Loot Co"
-    },
-    desc: {
-      en: "A research case study on cultural technology, access, and reparative methods.",
-      de: "Eine Research-Fallstudie zu Kulturtechnologie, Zugang und reparativen Methoden."
-    },
-    image: "images/case-loot.png",
-    bullets: {
-      en: [
-        "'Reparative piracy'—reimagining museum archives through 3D scanning and storytelling",
-        "Creating accessible tools for communities to co-design and remix digital collections",
-        "In collaboration with the Smithsonian and Mozilla to rethink ownership, access, and IP"
-      ],
-      de: [
-        "'Reparative Piraterie' – Museumarchive durch 3D-Scanning und Storytelling neu denken",
-        "Zugängliche Werkzeuge schaffen, damit Communities digitale Sammlungen mitgestalten und remixen können",
-        "In Zusammenarbeit mit Smithsonian und Mozilla, um Eigentum, Zugang und IP neu zu denken"
-      ]
-    }
-  }
-};
+// Moved to content.json
 
 let activeCaseStudyId = null;
 
 // ─── HERO BG SLIDESHOW ───
-const heroBgSlides = document.querySelectorAll('.hero-slide');
-let heroBgIndex = 0;
-setInterval(() => {
-  heroBgSlides[heroBgIndex].classList.remove('active');
-  heroBgIndex = (heroBgIndex + 1) % heroBgSlides.length;
-  heroBgSlides[heroBgIndex].classList.add('active');
-}, 5000);
 
-// ─── HERO SLOT CYCLING ───
-const heroSlots = {
-  en: [
-    "communities win.",
-    "artists own their work.",
-    "culture isn't erased.",
-    "play heals.",
-    "tech serves people."
-  ],
-  de: [
-    "Gemeinschaften gewinnen.",
-    "Künstler ihr Werk besitzen.",
-    "Kultur nicht gelöscht wird.",
-    "Spiel heilt.",
-    "Technik Menschen dient."
-  ]
-};
+function getHeroSlots(lang) {
+  return SITE_CONTENT?.hero?.headlineRotator?.[lang] || [];
+}
+
 let slotIndex = 0;
+
 function cycleSlot() {
-  slotIndex = (slotIndex + 1) % heroSlots.en.length;
-  const enEl = document.getElementById('hero-slot-en');
-  const deEl = document.getElementById('hero-slot-de');
-  if (enEl) {
-    enEl.style.transition = 'opacity 0.3s, transform 0.3s';
-    enEl.style.opacity = '0'; enEl.style.transform = 'translateY(-10px)';
-    setTimeout(() => {
-      enEl.textContent = heroSlots.en[slotIndex];
-      enEl.style.transform = 'translateY(10px)';
-      requestAnimationFrame(() => {
-        enEl.style.opacity = '1'; enEl.style.transform = 'translateY(0)';
-      });
-    }, 300);
-  }
-  if (deEl) {
-    deEl.style.transition = 'opacity 0.3s, transform 0.3s';
-    deEl.style.opacity = '0'; deEl.style.transform = 'translateY(-10px)';
-    setTimeout(() => {
-      deEl.textContent = heroSlots.de[slotIndex];
-      deEl.style.transform = 'translateY(10px)';
-      requestAnimationFrame(() => {
-        deEl.style.opacity = '1'; deEl.style.transform = 'translateY(0)';
-      });
-    }, 300);
+  const lang = document.documentElement.getAttribute('data-lang') || 'en';
+  const slots = getHeroSlots(lang);
+  const slotEl = document.getElementById('hero-slot');
+
+  if (!slotEl || slots.length === 0) return;
+
+  slotIndex = (slotIndex + 1) % slots.length;
+  slotEl.style.transition = 'opacity 0.3s, transform 0.3s';
+  slotEl.style.opacity = '0';
+  slotEl.style.transform = 'translateY(-10px)';
+
+  setTimeout(() => {
+    slotEl.textContent = slots[slotIndex];
+    slotEl.style.transform = 'translateY(10px)';
+    requestAnimationFrame(() => {
+      slotEl.style.opacity = '1';
+      slotEl.style.transform = 'translateY(0)';
+    });
+  }, 300);
+}
+
+function setInitialHeroSlot() {
+  const lang = document.documentElement.getAttribute('data-lang') || 'en';
+  const slots = getHeroSlots(lang);
+  const slotEl = document.getElementById('hero-slot');
+  if (slotEl && slots.length) {
+    slotEl.textContent = slots[slotIndex];
   }
 }
-setInterval(cycleSlot, 3000);
+
+let heroIndex = 0;
+
+function cycleHeroSlides() {
+  const slides = document.querySelectorAll('.hero-slide');
+  if (!slides.length) return;
+
+  slides[heroIndex].classList.remove('active');
+  heroIndex = (heroIndex + 1) % slides.length;
+  slides[heroIndex].classList.add('active');
+}
 
 // ─── MODAL ───
 // openModal now accepts a case-study ID so the submit handler knows what to send.
@@ -1051,7 +1015,7 @@ function openModal(e, caseStudyId) {
 
   activeCaseStudyId = caseStudyId || null;
   const lang = document.documentElement.getAttribute('data-lang') || 'en';
-  const caseStudy = CASE_STUDY_CONTENT[activeCaseStudyId];
+  const caseStudy = SITE_CONTENT?.caseStudies?.[activeCaseStudyId];
 
   const hiddenField = document.getElementById('case-study-id');
   if (hiddenField) hiddenField.value = activeCaseStudyId || '';
@@ -1069,6 +1033,7 @@ function openModal(e, caseStudyId) {
     document.getElementById('modal-desc').textContent = caseStudy.desc[lang] || caseStudy.desc.en;
 
     const modalImage = document.getElementById('modal-image');
+
     modalImage.src = caseStudy.image;
     modalImage.alt = caseStudy.title[lang] || caseStudy.title.en;
 
@@ -1162,9 +1127,7 @@ document.getElementById('modal-form').addEventListener('submit', async function(
   } catch (err) {
     status.className = 'error';
     status.style.display = 'block';
-    status.textContent = lang === 'de'
-      ? 'Fehler beim Senden. Bitte erneut versuchen.'
-      : 'Something went wrong. Please try again.';
+    status.textContent = getContentValue(SITE_CONTENT, 'contact.form.error', lang);
     console.error(err);
   }
 
@@ -1173,17 +1136,28 @@ document.getElementById('modal-form').addEventListener('submit', async function(
 });
 
 // ─── LANGUAGE ───
+
 function setLang(lang) {
   document.documentElement.setAttribute('data-lang', lang);
+  document.documentElement.setAttribute('lang', lang);
   document.querySelectorAll('.lang-btn').forEach(b => {
     b.classList.toggle('active', b.textContent.trim().toLowerCase() === lang);
   });
+
   document.getElementById('form-lang').value = lang;
   document.getElementById('modal-lang').value = lang;
-  document.querySelectorAll('#ftype option[data-en], .modal-select option[data-en]').forEach(opt => {
-    opt.textContent = opt.dataset[lang] || opt.dataset.en;
-  });
+
+  applyContent(lang);
+  renderAboutColumns(lang);
+  renderPartnerStats(lang);
+  renderCaseStudyCards(lang);
+  renderInquiryOptions(lang);
+  renderGDPR(lang);
+
   localStorage.setItem('ampl-lang', lang);
+
+  slotIndex = 0;
+  setInitialHeroSlot();
 }
 
 function dismissGDPR(accepted) {
@@ -1192,9 +1166,21 @@ function dismissGDPR(accepted) {
 }
 
 // ─── INIT ───
-(function init() {
-  const savedLang = localStorage.getItem('ampl-lang');
-  if (savedLang) setLang(savedLang);
+(async function init() {
+  await loadContent();
+  
+  const savedLang = localStorage.getItem('ampl-lang') || 'en';
+  setLang(savedLang);
+  
+  // text rotation
+  setTimeout(() => {
+    setInterval(cycleSlot, 3000);
+  }, 3000);
+
+  // hero image rotation
+  setTimeout(() => {
+  setInterval(cycleHeroSlides, 6000);
+  }, 6000);
 
   if (!localStorage.getItem('ampl-gdpr')) {
     setTimeout(() => document.getElementById('gdpr-banner').classList.add('visible'), 1400);
@@ -1208,7 +1194,9 @@ function dismissGDPR(accepted) {
       }
     });
   }, { threshold: 0.08 });
+
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
 })();
 
 // ─── CONTACT FORM ───
@@ -1226,32 +1214,30 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   const email = this.querySelector('input[name="email"]').value.trim();
   const message = this.querySelector('textarea[name="message"]').value.trim();
 
+// error
+
   if (!name || !email || !message) {
     status.className = 'error';
     status.style.display = 'block';
-    status.textContent = lang === 'de'
-      ? 'Bitte füllen Sie Name, E-Mail und Nachricht aus.'
-      : 'Please complete name, email, and message.';
+    status.textContent = getContentValue(SITE_CONTENT, 'contact.form.error', lang);
     return;
   }
 
   btn.style.opacity = '0.5';
   btn.disabled = true;
 
+// sending
+
   status.className = '';
   status.style.display = 'block';
-  status.textContent = lang === 'de'
-    ? 'Wird gesendet...'
-    : 'Sending...';
-
+  status.textContent  = getContentValue(SITE_CONTENT, 'contact.form.sending', lang);
   // Submit through hidden iframe to avoid CORS issues
   this.submit();
 
+// success
   status.className = 'success';
   status.style.display = 'block';
-  status.textContent = lang === 'de'
-    ? '✓ Nachricht gesendet. Wir melden uns bald.'
-    : '✓ Message sent. We’ll be in touch soon.';
+  status.textContent = getContentValue(SITE_CONTENT, 'contact.form.success', lang);
 
   this.reset();
 
