@@ -11,18 +11,24 @@
     "headlinePrefix": { "en": "A future where<br>", "de": "Eine Zukunft in der<br>" },
     "headlineRotator": {
       "en": [
-        "communities win.",
-        "artists own their work.",
-        "culture isn't erased.",
-        "play heals.",
-        "tech serves people."
+        "matriarchy leads",
+        "artists flourish",
+        "culture connects",
+        "collaboration wins",
+        "technology's kind",
+        "youth thrive",
+        "play heals",
+        "communities win"
       ],
       "de": [
-        "Gemeinschaften gewinnen.",
-        "Künstler ihr Werk besitzen.",
-        "Kultur nicht gelöscht wird.",
-        "Spiel heilt.",
-        "Technik Menschen dient."
+        "matriarchy leads",
+        "artists flourish",
+        "culture connects",
+        "collaboration wins",
+        "technology's kind",
+        "youth thrive",
+        "play heals",
+        "communities win"
       ]
     },
     "sub": {
