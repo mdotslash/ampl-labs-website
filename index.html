@@ -493,7 +493,7 @@
 <!-- GDPR -->
 <div id="gdpr-banner" role="region" aria-label="Cookie consent">
   <p class="gdpr-text" id="gdpr-text">
-    <a href="/privacy.html" id="gdpr-privacy-link"></a>
+    <a href="./privacy.html" id="gdpr-privacy-link"></a>
   </p>
   <div class="gdpr-actions">
     <button class="gdpr-btn" onclick="dismissGDPR(false)" data-i18n="gdpr.decline"></button>
@@ -753,7 +753,7 @@
           <textarea class="form-textarea" id="fmsg" name="message" required data-i18n-placeholder="contact.form.messagePlaceholder"></textarea>
         </div>
 
-        <p class="form-privacy"><span data-i18n="contact.form.privacy"></span> <a href="/privacy.html">privacy policy</a>.</p>
+        <p class="form-privacy"><span data-i18n="contact.form.privacy"></span> <a href="./privacy.html">privacy policy</a>.</p>
         <input type="hidden" name="_language" id="form-lang" value="en">
 
         <button class="btn-primary" type="submit" style="align-self:flex-start" data-i18n="contact.form.submit"></button>
@@ -782,8 +782,8 @@
     <li><a href="#about" data-i18n="footer.mission"></a></li>
     <li><a href="#work" data-i18n="footer.work"></a></li>
     <li><a href="#contact" data-i18n="footer.contact"></a></li>
-    <li><a href="/privacy.html" data-i18n="footer.privacy"></a></li>
-    <li><a href="/imprint.html" data-i18n="footer.imprint"></a></li>
+    <li><a href="./privacy.html" data-i18n="footer.privacy"></a></li>
+    <li><a href="./imprint.html" data-i18n="footer.imprint"></a></li>
   </ul>
   <span class="footer-copy" data-i18n="footer.copy"></span>
 </footer>
@@ -931,7 +931,7 @@ function renderGDPR(lang) {
   const parts = fullText.split(linkText);
 
   if (parts.length === 2) {
-    gdprText.innerHTML = `${parts[0]}<a href="/privacy.html" id="gdpr-privacy-link">${linkText}</a>${parts[1]}`;
+    gdprText.innerHTML = `${parts[0]}<a href="./privacy.html" id="gdpr-privacy-link">${linkText}</a>${parts[1]}`;
   } else {
     gdprText.textContent = fullText;
   }
