@@ -15,7 +15,7 @@
         "artists flourish",
         "culture connects",
         "collaboration wins",
-        "technology restores",
+        "tech restores",
         "youth thrive",
         "play heals",
         "communities win"
@@ -25,7 +25,7 @@
         "artists flourish",
         "culture connects",
         "collaboration wins",
-        "technology's kind",
+        "techn's kind",
         "youth thrive",
         "play heals",
         "communities win"
@@ -35,7 +35,7 @@
       "en": "We make technology that works for communities — not against them.",
       "de": "Wir schaffen Technologie, die für Gemeinschaften arbeitet — nicht gegen sie."
     },
-    "primaryCta": { "en": "See our work", "de": "Unsere Projekte" },
+    "primaryCta": { "en": "Our Work", "de": "Unsere Projekte" },
     "secondaryCta": { "en": "Get in touch", "de": "Kontakt aufnehmen" }
   },
   "about": {
@@ -44,8 +44,8 @@
       "de": "Mission"
     },
     "statement": {
-      "en": "We don't have<br>a mission statement.<br>We have a <em>purpose.</em>",
-      "de": "Wir haben keine<br>Missionserklärung.<br>Wir haben einen <em>Zweck.</em>"
+      "en": "We don't have a<br>mission statement.<br>We have a <em>purpose.</em>",
+      "de": "Wir haben keine Missionserklärung.<br>Wir haben einen <em>Zweck.</em>"
     },
     "columns": [
       {
@@ -86,7 +86,7 @@
       "de": "Mit wem wir arbeiten"
     },
     "headline": {
-      "en": "Some companies have clients.<br>We have collaborators.",
+      "en": "Some companies have clients. We have<br>collaborators.",
       "de": "Manche haben Kunden.<br>Wir haben Mitgestalter."
     },
     "stats": [
@@ -138,6 +138,14 @@
     "submit": {
       "en": "Email me this case study",
       "de": "Diese Fallstudie per E-Mail senden"
+    },
+    "error": {
+      "en": "Please enter your email and choose a case study.",
+      "de": "Bitte E-Mail und Fallstudie angeben."
+    },
+    "success": {
+      "en": "✓ Thanks — check your email.",
+      "de": "✓ Danke — bitte prüfen Sie Ihr Postfach."
     }
   },
   "caseStudies": {
@@ -223,7 +231,7 @@
             "de": "Frankfurt · Berlin"
           },
           "cta": {
-            "en": "Get case study",
+            "en": "View",
             "de": "Anfragen"
           }
         }
@@ -264,7 +272,7 @@
             "de": "2021 · Mozilla Creative Media Award"
           },
           "cta": {
-            "en": "Get case study",
+            "en": "View",
             "de": "Anfragen"
           }
         }
@@ -288,7 +296,7 @@
           "de": "Weltweit verfügbar"
         },
         "cta": {
-          "en": "Contact us",
+          "en": "Contact",
           "de": "Kontakt"
         }
       }
