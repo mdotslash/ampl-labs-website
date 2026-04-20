@@ -1,4 +1,42 @@
-# AMPL Labs Site Snapshot 4/17
+# AMPL Labs Site Snapshot 4/19
+
+# Changelog — v3
+
+## Added
+- Mobile nav overlay with hamburger → X toggle
+- Always-visible case study CTA on mobile
+- JSON-driven renderers for About, Partners, Cases, Forms, GDPR
+- Modal success/error messaging via `content.json`
+
+## Changed
+- Nav refactored to grid (centered language toggle on mobile)
+- Case studies fully driven by `content.json` (cards + modal unified)
+- Language system standardized via `getContentValue`
+- Hero rotation timing simplified
+- Case card UX:
+  - Desktop = hover CTA
+  - Mobile = persistent CTA
+
+## Fixed
+- Mobile menu z-index / visibility issues
+- Toggle state conflicts (`open` vs `is-open`)
+- Hero rotation delay on load
+- Modal language inconsistencies
+- Case card double-trigger clicks
+- Featured image hover opacity bug
+- Mobile modal scroll + close behavior
+
+## Removed
+- `.en / .de` DOM duplication
+- Hardcoded language conditionals
+- Separate mobile close button
+- Arrow affordance experiment
+- Duplicate / legacy CSS
+
+## Notes
+- Forms still use optimistic success state
+- Content centralized in `content.json`
+- Static site, no build step
 
 This archive contains the current static frontend for the AMPL Labs site, centered around a single `index.html` file plus a `content/content.json` language/content model.
 
