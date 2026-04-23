@@ -322,8 +322,12 @@
       "emailPlaceholder": { "en": "you@example.com", "de": "you@example.de" },
       "messagePlaceholder": { "en": "Tell us about your project...", "de": "Erzählen Sie uns von Ihrem Projekt..." },
       "privacy": {
-        "en": "Your data is used only to respond to your inquiry and is never sold or shared. By submitting you agree to our privacy policy.",
-        "de": "Ihre Daten werden nur zur Beantwortung Ihrer Anfrage verwendet. Durch das Absenden stimmen Sie unserer Datenschutzrichtlinie zu."
+        "en": "Your data is used only to respond to your inquiry and is never sold or shared.",
+        "de": "Ihre Daten werden nur zur Beantwortung Ihrer Anfrage verwendet und niemals weitergegeben."
+      },
+      "privacyCta": {
+        "en": "Learn more",
+        "de": "Mehr erfahren"
       },
       "submit": { "en": "Send message", "de": "Nachricht senden" },
       "sending": { "en": "Sending...", "de": "Wird gesendet..." },
@@ -359,6 +363,10 @@
     "text": {
       "en": "We use minimal analytics to understand how visitors find us. No tracking cookies, no advertising. By continuing you agree to our privacy policy.",
       "de": "Wir verwenden minimale Analysen. Keine Tracking-Cookies, keine Werbung. Durch die weitere Nutzung stimmen Sie unserer Datenschutzrichtlinie zu."
+    },
+    "privacyCta": {
+      "en": "Learn more",
+      "de": "Mehr erfahren"
     },
     "decline": {
       "en": "Decline",
