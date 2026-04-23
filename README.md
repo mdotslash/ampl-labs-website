@@ -9,6 +9,7 @@
 - Case study card number eyebrows (`.case-num`) restyled to match section-label convention — DM Sans, 11px, accent color, uppercase
 - Footer reduced from 5 links to 4 (removed redundant "Contact" link); mobile layout uses 2-col CSS grid for clean 2+2 wrapping
 - Back link on `privacy.html` and `imprint.html` now returns to footer position (`#footer`) instead of page top
+- `h1` headings on `privacy.html` and `imprint.html` updated to match site header style — Bebas Neue, uppercase, fluid sizing via `clamp`
 
 ## Fixed
 - Modal close button (×) moved outside `.modal-box` and positioned absolutely on the overlay — no longer affected by inner scroll conflicts on mobile
