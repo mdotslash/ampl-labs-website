@@ -828,9 +828,10 @@ nav {
 
 <!-- GDPR -->
 <div id="gdpr-banner" role="region" aria-label="Cookie consent">
-  <p class="gdpr-text" id="gdpr-text">
-    <a href="./privacy.html" id="gdpr-privacy-link"></a>
-  </p>
+    <p class="gdpr-text">
+      <span data-i18n="gdpr.text"></span>
+      <a href="./privacy.html" data-i18n="gdpr.privacyCta"></a>.
+    </p>
   <div class="gdpr-actions">
     <button class="gdpr-btn" onclick="dismissGDPR(false)" data-i18n="gdpr.decline"></button>
     <button class="gdpr-btn accept" onclick="dismissGDPR(true)" data-i18n="gdpr.accept"></button>
@@ -1108,7 +1109,10 @@ nav {
           <textarea class="form-textarea" id="fmsg" name="message" required data-i18n-placeholder="contact.form.messagePlaceholder"></textarea>
         </div>
 
-        <p class="form-privacy"><span data-i18n="contact.form.privacy"></span> <a href="./privacy.html" data-i18n="footer.privacy"></a>.</p>
+        <p class="form-privacy">
+          <span data-i18n="contact.form.privacy"></span>
+          <a href="./privacy.html" data-i18n="contact.form.privacyCta"></a>.
+        </p>
         <input type="hidden" name="_language" id="form-lang" value="en">
 
         <button class="btn-primary" type="submit" style="align-self:flex-start" data-i18n="contact.form.submit"></button>
