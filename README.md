@@ -1,4 +1,28 @@
-# AMPL Labs Site Snapshot 4/19
+# AMPL Labs Site Snapshot 4/22
+
+# Changelog — v4
+
+## Changed
+- Global body font size bumped from 16px to 17px
+- Hero CTA buttons stack vertically on mobile; primary button is full-width
+- Partner stat boxes now stack in a single column on mobile (was 2-col)
+- Case study card number eyebrows (`.case-num`) restyled to match section-label convention — DM Sans, 11px, accent color, uppercase
+- Footer reduced from 5 links to 4 (removed redundant "Contact" link); mobile layout uses 2-col CSS grid for clean 2+2 wrapping
+- Back link on `privacy.html` and `imprint.html` now returns to footer position (`#footer`) instead of page top
+- `h1` headings on `privacy.html` and `imprint.html` updated to match site header style — Bebas Neue, uppercase, fluid sizing via `clamp`
+
+## Fixed
+- Modal close button (×) moved outside `.modal-box` and positioned absolutely on the overlay — no longer affected by inner scroll conflicts on mobile
+- Hamburger menu middle bar now collapses via `scaleX(0)` in addition to `opacity: 0`, eliminating the dot artifact visible through the X on mobile
+- Hero `min-height` uses `100svh` fallback — prevents CTAs from being cut off below the browser toolbar on iPhone
+- Duplicate "privacy policy" text in contact form — i18n text trimmed and link now uses `data-i18n="footer.privacy"` for language-aware label
+- Case study card buttons centered on mobile (`.case-footer` now `justify-content: center`)
+- Newsletter form stretches to full width on mobile
+
+## Removed
+- "Your Name" field from case study email capture modal — email-only capture; JS payload cleaned up accordingly
+
+---
 
 # Changelog — v3
 

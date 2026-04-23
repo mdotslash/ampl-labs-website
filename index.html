@@ -26,7 +26,7 @@
     color: var(--white);
     font-family: 'DM Sans', sans-serif;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.6;
     overflow-x: hidden;
   }
@@ -166,6 +166,7 @@ nav {
 
 .mobile-menu-toggle.is-open span:nth-child(2) {
   opacity: 0;
+  transform: scaleX(0);
 }
 
 .mobile-menu-toggle.is-open span:nth-child(3) {
@@ -250,6 +251,7 @@ nav {
   /* ─── HERO ─── */
   #hero {
     min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -548,7 +550,7 @@ nav {
   .case-card.s6 { grid-column: span 6; }
   .case-card.s4 { grid-column: span 4; }
   .case-card.s12 { grid-column: span 12; }
-  .case-num { font-family: 'Bebas Neue', sans-serif; font-size: 12px; letter-spacing: 0.1em; opacity: 0.2; margin-bottom: 14px; }
+  .case-num { font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); opacity: 0.7; margin-bottom: 14px; }
   .case-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
   .case-tag { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--tag-bg); color: var(--tag-text); padding: 3px 10px; }
   .case-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(22px, 2.4vw, 36px); letter-spacing: 0.03em; line-height: 1.05; margin-bottom: 10px; }
@@ -620,19 +622,24 @@ nav {
   }
 
   .modal-close {
-    position: sticky;
-    top: 0;
-    margin-left: auto;
-    display: block;
-    background: #141414;
-    border: none;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(20,20,20,0.95);
+    border: 1px solid var(--border);
     color: var(--white);
     cursor: pointer;
     font-size: 22px;
-    opacity: 0.7;
+    opacity: 0.8;
     transition: opacity 0.2s;
     line-height: 1;
-    z-index: 2;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
   }
 
 
@@ -798,12 +805,20 @@ nav {
         margin: 8px 0 16px;
       }
 
+    .hero-actions { flex-direction: column; gap: 12px; }
+    .hero-actions .btn-primary,
+    .hero-actions .btn-secondary { width: 100%; text-align: center; }
+
+    .stats-row { grid-template-columns: 1fr; }
+
+    .case-footer { justify-content: center; gap: 16px; }
+
     #newsletter { flex-direction: column; align-items: flex-start; padding: 48px 24px; }
     .newsletter-input { width: 100%; }
-    
+    .newsletter-form { width: 100%; }
 
     footer { flex-direction: column; text-align: center; }
-    .footer-links { flex-wrap: wrap; justify-content: center; }
+    .footer-links { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; justify-items: center; }
     #gdpr-banner { padding: 16px 24px; flex-direction: column; align-items: flex-start; }
   }
 
@@ -824,8 +839,8 @@ nav {
 
 <!-- CASE STUDY CAPTURE MODAL -->
 <div id="capture-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <button class="modal-close" onclick="closeModal()" aria-label="Close">×</button>
   <div class="modal-box">
-    <button class="modal-close" onclick="closeModal()" aria-label="Close">×</button>
     <div class="modal-label" data-i18n="modal.caseStudyLabel"></div>
 
     <!-- Dynamic case study content gets injected here -->
@@ -840,7 +855,6 @@ nav {
 
     <form class="modal-form" id="modal-form" novalidate>
       <input class="modal-input" type="email" name="email" placeholder="your@email.com" required>
-      <input class="modal-input" type="text" name="name" placeholder="Your name (optional)">
 
       <input type="hidden" name="case_study_id" id="case-study-id" value="">
       <input type="hidden" name="_language" id="modal-lang" value="en">
@@ -1094,7 +1108,7 @@ nav {
           <textarea class="form-textarea" id="fmsg" name="message" required data-i18n-placeholder="contact.form.messagePlaceholder"></textarea>
         </div>
 
-        <p class="form-privacy"><span data-i18n="contact.form.privacy"></span> <a href="./privacy.html">privacy policy</a>.</p>
+        <p class="form-privacy"><span data-i18n="contact.form.privacy"></span> <a href="./privacy.html" data-i18n="footer.privacy"></a>.</p>
         <input type="hidden" name="_language" id="form-lang" value="en">
 
         <button class="btn-primary" type="submit" style="align-self:flex-start" data-i18n="contact.form.submit"></button>
@@ -1117,12 +1131,11 @@ nav {
   </form>
 </section>
 
-<footer>
+<footer id="footer">
   <div class="footer-logo">AMPL Labs</div>
   <ul class="footer-links">
     <li><a href="#about" data-i18n="footer.mission"></a></li>
     <li><a href="#work" data-i18n="footer.work"></a></li>
-    <li><a href="#contact" data-i18n="footer.contact"></a></li>
     <li><a href="./privacy.html" data-i18n="footer.privacy"></a></li>
     <li><a href="./imprint.html" data-i18n="footer.imprint"></a></li>
   </ul>
@@ -1444,7 +1457,6 @@ document.getElementById('modal-form').addEventListener('submit', async function(
   const status = document.getElementById('modal-status');
   const lang = document.documentElement.getAttribute('data-lang') || 'en';
   const email = this.querySelector('input[name="email"]').value.trim();
-  const name = (this.querySelector('input[name="name"]')?.value || '').trim();
   const caseStudyId = document.getElementById('case-study-id').value;
 
   if (!email || !caseStudyId) {
@@ -1465,7 +1477,6 @@ document.getElementById('modal-form').addEventListener('submit', async function(
       },
       body: JSON.stringify({
         email,
-        name,
         caseStudyId,
         lang
       })
