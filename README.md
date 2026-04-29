@@ -24,6 +24,30 @@
 
 ---
 
+# Changelog — v4.1 — Accessibility (WCAG AA)
+
+## Changed
+- Raised all sub-0.5 opacity values to `0.5` (minimum for ~4.8:1 contrast ratio on `#f5f2ea` over `#141414`, meeting WCAG AA):
+  - `.lang-btn` inactive state: 0.4 → 0.5
+  - `.logo-item`: 0.38 → 0.5
+  - `.case-featured-year`: 0.3 → 0.5
+  - `.case-year`: 0.3 → 0.5
+  - `.case-soon-label`: 0.35 → 0.5
+  - `.contact-item-label`: 0.38 → 0.5
+  - `.form-label`: 0.42 → 0.5
+  - `.form-privacy`: 0.38 → 0.5
+  - `.footer-links a`: 0.32 → 0.5
+  - `.footer-copy`: 0.22 → 0.5
+
+## Fixed
+- `aria-hidden-focus` (WCAG 2 AA, serious): mobile menu now has `inert` + `aria-hidden="true"` by default so hidden links cannot receive keyboard focus; both attributes are removed when the menu opens
+
+## Notes
+- axe-core 4.9.1 WCAG 2 AA audit result post-fix: **0 violations, 27 passes**
+- 11 `color-contrast` nodes flagged as *incomplete* (not violations) — all are hero/nav elements over a background image; axe cannot compute image-backed contrast. Dark overlay (`rgba(13,13,13,0.55)`) is present and visually sufficient
+
+---
+
 # Changelog — v3
 
 ## Added

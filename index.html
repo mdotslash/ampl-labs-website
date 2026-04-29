@@ -56,7 +56,7 @@
   .lang-btn {
     font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.1em;
     text-transform: uppercase; padding: 6px 12px; background: transparent; color: var(--white);
-    border: none; cursor: pointer; opacity: 0.4; transition: opacity 0.2s, background 0.2s;
+    border: none; cursor: pointer; opacity: 0.5; transition: opacity 0.2s, background 0.2s;
   }
   .lang-btn.active { background: rgba(232,255,71,0.1); color: var(--accent); opacity: 1; }
 
@@ -426,7 +426,7 @@ nav {
   }
   .logo-scroll:hover { animation-play-state: paused; }
   @keyframes scrollLogos { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-  .logo-item { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.38; white-space: nowrap; font-weight: 500; }
+  .logo-item { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.5; white-space: nowrap; font-weight: 500; }
 
 /* ─── CASE STUDIES ─── */
 
@@ -519,7 +519,7 @@ nav {
 .case-featured-year {
   font-size: 12px;
   letter-spacing: 0.06em;
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
   .case-cta-btn {
@@ -565,7 +565,7 @@ nav {
     border-top: 1px solid var(--border); 
   }
 
-  .case-year { font-size: 12px; letter-spacing: 0.06em; opacity: 0.3; }
+  .case-year { font-size: 12px; letter-spacing: 0.06em; opacity: 0.5; }
 
   .case-get-btn {
     font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
@@ -578,7 +578,7 @@ nav {
   .case-card.soon { cursor: default; opacity: 0.5; }
   .case-card.soon:hover { border-color: var(--border); }
   .case-card.soon::after { display: none; }
-  .case-soon-label { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.35; }
+  .case-soon-label { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.5; }
 
 /*  Update capture modal to make it scrollable on small screens*/
 
@@ -707,12 +707,12 @@ nav {
   .contact-lede { font-size: 17px; line-height: 1.75; opacity: 0.65; margin-bottom: 32px; }
   .contact-detail { display: flex; flex-direction: column; gap: 20px; }
   .contact-item { display: flex; flex-direction: column; gap: 4px; }
-  .contact-item-label { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.38; }
+  .contact-item-label { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.5; }
   .contact-item-value { font-size: 15px; opacity: 0.75; }
   .contact-form { display: flex; flex-direction: column; gap: 14px; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   .form-group { display: flex; flex-direction: column; gap: 6px; }
-  .form-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.42; }
+  .form-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.5; }
   .form-input, .form-select, .form-textarea {
     font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 300;
     color: var(--white); background: #141414; border: 1px solid var(--border);
@@ -724,7 +724,7 @@ nav {
     background-repeat: no-repeat; background-position: right 14px center; padding-right: 40px; cursor: pointer;
   }
   .form-textarea { min-height: 120px; resize: vertical; }
-  .form-privacy { font-size: 12px; opacity: 0.38; line-height: 1.5; }
+  .form-privacy { font-size: 12px; opacity: 0.5; line-height: 1.5; }
   .form-privacy a { color: var(--accent); text-decoration: none; }
   #form-status { font-size: 13px; padding: 12px 16px; border: 1px solid var(--border); display: none; }
   #form-status.success { display: block; border-color: rgba(100,220,130,0.3); color: #64dc82; }
@@ -754,9 +754,9 @@ nav {
   footer { border-top: 1px solid var(--border); padding: 48px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
   .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 0.08em; color: var(--accent); }
   .footer-links { display: flex; gap: 24px; list-style: none; }
-  .footer-links a { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white); opacity: 0.32; text-decoration: none; transition: opacity 0.2s; }
+  .footer-links a { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white); opacity: 0.5; text-decoration: none; transition: opacity 0.2s; }
   .footer-links a:hover { opacity: 0.7; }
-  .footer-copy { font-size: 12px; opacity: 0.22; letter-spacing: 0.04em; }
+  .footer-copy { font-size: 12px; opacity: 0.5; letter-spacing: 0.04em; }
 
   .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
   .fade-up.visible { opacity: 1; transform: translateY(0); }
@@ -890,7 +890,7 @@ nav {
   <a href="#contact" class="nav-cta" data-i18n="nav.cta"></a>
 </nav>
 
-<div id="mobile-menu" aria-hidden="true">
+<div id="mobile-menu" aria-hidden="true" inert>
   <div class="mobile-menu-panel">
     <div class="mobile-menu-links">
       <a href="#about" data-i18n="nav.mission">Mission</a>
@@ -1321,6 +1321,8 @@ const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
 function openMobileMenu() {
   if (!mobileMenu || !mobileMenuToggle) return;
   mobileMenu.classList.add('open');
+  mobileMenu.removeAttribute('aria-hidden');
+  mobileMenu.removeAttribute('inert');
   mobileMenuToggle.classList.add('is-open');
   mobileMenuToggle.setAttribute('aria-expanded', 'true');
   document.body.style.overflow = 'hidden';
@@ -1329,6 +1331,8 @@ function openMobileMenu() {
 function closeMobileMenu() {
   if (!mobileMenu || !mobileMenuToggle) return;
   mobileMenu.classList.remove('open');
+  mobileMenu.setAttribute('aria-hidden', 'true');
+  mobileMenu.setAttribute('inert', '');
   mobileMenuToggle.classList.remove('is-open');
   mobileMenuToggle.setAttribute('aria-expanded', 'false');
   document.body.style.overflow = '';
