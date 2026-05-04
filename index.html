@@ -583,8 +583,8 @@ nav {
     background: rgba(0,0,0,0.85);
     backdrop-filter: blur(6px);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     padding: 24px;
     opacity: 0;
     pointer-events: none;
@@ -604,8 +604,7 @@ nav {
     padding: 52px;
     max-width: 520px;
     width: 100%;
-    max-height: calc(100vh - 48px);
-    overflow-y: auto;
+    margin: auto 0;
     position: relative;
     transform: translateY(16px);
     transition: transform 0.3s;
@@ -788,7 +787,6 @@ nav {
 
     .modal-box {
         padding: 28px 20px 24px;
-        max-height: calc(100vh - 24px);
         width: 100%;
       }
       .modal-title {
