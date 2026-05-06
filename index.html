@@ -1503,7 +1503,8 @@ document.getElementById('modal-form').addEventListener('submit', async function(
     // Show a styled in-modal success state instead of the browser alert.
     status.className = 'success';
     status.style.display = 'block';
-    status.textContent = getContentValue(SITE_CONTENT, 'modal.success', lang);
+    status.innerHTML = getContentValue(SITE_CONTENT, 'modal.success', lang)
+      + ' <a href="#" onclick="closeModal();return false;" style="color:inherit;text-decoration:underline;white-space:nowrap;">Close</a>';
   } catch (err) {
     status.className = 'error';
     status.style.display = 'block';
