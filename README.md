@@ -1,4 +1,12 @@
-# AMPL Labs Site Snapshot 4/22
+# AMPL Labs Site Snapshot 5/7
+
+# Changelog — v4.2
+
+## Changed
+- Case study card footer (`.case-footer`) stacks vertically on mobile — year above button, 12px gap — was side-by-side
+- Secondary hero button ("Get in touch") now shows the green outline (`rgba(232,255,71,0.4)`) as its default state; hover reverts to the standard border
+
+---
 
 # Changelog — v4
 
