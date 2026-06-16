@@ -12,13 +12,13 @@
     "headlineRotator": {
       "en": [
         "matriarchy leads",
-        "artists flourish",
-        "culture connects",
-        "collaboration wins",
-        "tech restores",
-        "youth thrive",
-        "play heals",
-        "communities win"
+        "artists empower",
+        "restitution heals",
+        "youth flourish",
+        "play regenerates",
+        "communities thrive",
+        "biodiversity wins",
+        ""
       ],
       "de": [
         "matriarchy leads",
@@ -32,7 +32,7 @@
       ]
     },
     "sub": {
-      "en": "We make technology that works for communities — not against them.",
+      "en": "Community-powered programming, innovation and infrastructure for restorative futures.",
       "de": "Wir schaffen Technologie, die für Gemeinschaften arbeitet — nicht gegen sie."
     },
     "primaryCta": { "en": "Our Work", "de": "Unsere Projekte" },
@@ -44,7 +44,7 @@
       "de": "Mission"
     },
     "statement": {
-      "en": "We don't have a<br>mission statement.<br>We have a <em>purpose.</em>",
+      "en": "The Future Depends On<br><em>Connected, Empowered and Resilient</em> Communities.",
       "de": "Wir haben keine Missionserklärung.<br>Wir haben einen <em>Zweck.</em>"
     },
     "columns": [
@@ -54,7 +54,7 @@
           "de": "Woran wir glauben"
         },
         "body": {
-          "en": "Play connects and heals community. Cultural heritage belongs to the people who made it — not the institutions that acquired it. Technology should be an unfair advantage for the people the system is designed to ignore.",
+          "en": "Empowered, authentic communities are critical to building a better world.",
           "de": "Spiel verbindet und heilt Gemeinschaft. Kulturerbe gehört den Menschen, die es geschaffen haben. Technologie sollte ein Vorteil für diejenigen sein, die das System ignoriert."
         }
       },
@@ -64,7 +64,7 @@
           "de": "Für wen wir arbeiten"
         },
         "body": {
-          "en": "Optimists who are hungry for a better future that works for everyone. Museums ready to decolonize their collections. Communities who want to own their own stories. Artists who shouldn't have to choose between survival and integrity.",
+          "en": "Optimists who are hungry for a better future that works for everyone. We work with communities to design the infrastructure, tools they need to overcome imbalanced systems and build more caring, considerate ecosystems.",
           "de": "Optimisten, die eine bessere Zukunft wollen. Museen, die ihre Sammlungen dekolonisieren wollen. Gemeinschaften, die ihre eigenen Geschichten besitzen wollen."
         }
       },
@@ -74,7 +74,7 @@
           "de": "Wie wir arbeiten"
         },
         "body": {
-          "en": "We co-design with communities before we write a single line of code. We publish our source files. We give credit. As a UNESCO partner we've worked across the US, Germany, Nigeria, and Indonesia — and we don't extract from the places we work in.",
+          "en": "We lead with respect and trust. The most impactful, sustainable solutions are co-designed with community partners, cultural leaders and engaged stakeholders. We’ve facilitated and supported cultural organizations, artists and communities across North America, Europe, Asia, and Africa.",
           "de": "Wir ko-designen mit Gemeinschaften, bevor wir eine Zeile Code schreiben. Wir veröffentlichen unsere Quelldateien. Als UNESCO-Partner in den USA, Deutschland, Nigeria und Indonesien tätig."
         }
       }
@@ -86,35 +86,34 @@
       "de": "Mit wem wir arbeiten"
     },
     "headline": {
-      "en": "Some companies have clients. We have<br>collaborators.",
+      "en": "Optimists. Organizations and Artists Committed to Meaningful Change.",
       "de": "Manche haben Kunden.<br>Wir haben Mitgestalter."
     },
     "stats": [
       {
-        "number": "100%",
+        "number": "156+ MM",
         "label": {
-          "en": "Of QueerenciaNM participants were LGBTQ+ youth from rural NM",
+          "en": "Objects liberated from cultural institutions through open-source activations",
+          "de": "Jährliche Einsparungen je Museum durch SammelSucht"
+        }
+      },{
+        "number": "$450K",
+        "label": {
+          "en": "Paid to BIPOC artists & collaborators through our partnerships",
           "de": "Der QueerenciaNM-Teilnehmenden waren LGBTQ+-Jugendliche aus dem ländlichen NM"
         }
       },
       {
-        "number": "122K",
+        "number": "300",
         "label": {
-          "en": "AR filter impressions in 30 days. Zero paid promotion.",
+          "en": "Community archivists and cultural leaders trained in 3D scanning and metadata annotation.",
           "de": "AR-Filter-Impressionen in 30 Tagen. Ohne Werbung."
         }
       },
       {
-        "number": "$200K",
+        "number": "10%",
         "label": {
-          "en": "Saved annually by each museum using SammelSucht vs. existing tools",
-          "de": "Jährliche Einsparungen je Museum durch SammelSucht"
-        }
-      },
-      {
-        "number": "0",
-        "label": {
-          "en": "Benin Bronze scans locked behind a paywall. All open-licensed.",
+          "en": "of our revenue directly supports non-profits, education and artists.",
           "de": "Benin-Bronze-Scans hinter einer Bezahlschranke. Alle offen lizenziert."
         }
       }
