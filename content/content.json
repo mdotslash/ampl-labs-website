@@ -17,7 +17,7 @@
         "youth flourish",
         "play regenerates",
         "communities thrive",
-        "biodiversity wins",
+        "biodiversity wins"
       ],
       "de": [
         "de-matriarchy leads",
@@ -95,7 +95,8 @@
           "en": "Objects liberated from cultural institutions through digital heists & open-source activations.",
           "de": "Jährliche Einsparungen je Museum durch SammelSucht"
         }
-      },{
+      },
+      {
         "number": "$450K",
         "label": {
           "en": "Paid to BIPOC artists & collaborators through our partnerships.",
@@ -169,30 +170,30 @@
           "Gemeinsam entwickelt mit Künstler:innen, Community-Partnern und NIH-unterstützten Mitwirkenden"
         ]
       },
-        "featuredImage": "images/queerhero_featured.png",
-        "featured": {
-          "badge": {
-            "en": "Featured",
-            "de": "Highlight"
-          },
-          "tags": {
-            "en": ["LGBTQ+", "Youth", "Mixed Reality", "Public Programming", "2024"],
-            "de": ["LGBTQ+ Jugend", "AR", "Kunsttherapie", "2024"]
-          },
-          "desc": {
-            "en": "Art therapy and AR photobooth for rural LGBTQ+ youth in New Mexico. Co-designed with UNM, Moving Arts, and artist Gabriel García Román. Youth created multimedia self-portraits celebrated at public gallery openings statewide.",
-            "de": "Kunsttherapie und AR-Fotokabine für LGBTQ+-Jugendliche im ländlichen New Mexico. Mitgestaltet mit UNM, Moving Arts und Künstler Gabriel García Román."
-          },
-          "year": {
-            "en": "2024 · New Mexico, USA",
-            "de": "2024 · New Mexico, USA"
-          },
-          "cta": {
-            "en": "Get case study",
-            "de": "Fallstudie anfordern"
-          }
+      "featuredImage": "images/queerhero_featured.png",
+      "featured": {
+        "badge": {
+          "en": "Featured",
+          "de": "Highlight"
+        },
+        "tags": {
+          "en": ["LGBTQ+", "Youth", "Mixed Reality", "Public Programming", "2024"],
+          "de": ["LGBTQ+ Jugend", "AR", "Kunsttherapie", "2024"]
+        },
+        "desc": {
+          "en": "Art therapy and AR photobooth for rural LGBTQ+ youth in New Mexico. Co-designed with UNM, Moving Arts, and artist Gabriel García Román. Youth created multimedia self-portraits celebrated at public gallery openings statewide.",
+          "de": "Kunsttherapie und AR-Fotokabine für LGBTQ+-Jugendliche im ländlichen New Mexico. Mitgestaltet mit UNM, Moving Arts und Künstler Gabriel García Román."
+        },
+        "year": {
+          "en": "2024 · New Mexico, USA",
+          "de": "2024 · New Mexico, USA"
+        },
+        "cta": {
+          "en": "Get case study",
+          "de": "Fallstudie anfordern"
         }
-      },
+      }
+    },
     "sammelsucht": {
       "title": {
         "en": "Collecting Crave",
@@ -215,24 +216,24 @@
           "Entwickelt und erprobt mit führenden Institutionen in den USA und Europa"
         ]
       },
-        "card": {
-          "tags": {
-            "en": ["Museum Tech", "Mixed Reality", "Education"],
-            "de": ["Museumstechnologie", "Mixed Reality", "Digital Product"]
-          },
-          "desc": {
-            "en": "\"Pokémon Go for art.\" Mobile AR app letting museums showcase hidden collections. Frankfurt World Culture Museum + Berlin State Museums. Saves up to $200K/yr.",
-            "de": "\"Pokémon Go für Kunst.\" AR-App für Museen. Spart bis zu 200.000 $/Jahr."
-          },
-          "year": {
-            "en": "Frankfurt · Berlin",
-            "de": "Frankfurt · Berlin"
-          },
-          "cta": {
-            "en": "View",
-            "de": "Anfragen"
-          }
+      "card": {
+        "tags": {
+          "en": ["Museum Tech", "Mixed Reality", "Education"],
+          "de": ["Museumstechnologie", "Mixed Reality", "Digital Product"]
+        },
+        "desc": {
+          "en": "\"Pokémon Go for art.\" Mobile AR app letting museums showcase hidden collections. Frankfurt World Culture Museum + Berlin State Museums. Saves up to $200K/yr.",
+          "de": "\"Pokémon Go für Kunst.\" AR-App für Museen. Spart bis zu 200.000 $/Jahr."
+        },
+        "year": {
+          "en": "Frankfurt · Berlin",
+          "de": "Frankfurt · Berlin"
+        },
+        "cta": {
+          "en": "View",
+          "de": "Anfragen"
         }
+      }
     },
     "loot-merch": {
       "title": {
@@ -256,25 +257,25 @@
           "In Zusammenarbeit mit Smithsonian und Mozilla, um Eigentum, Zugang und IP neu zu denken"
         ]
       },
-        "card": {
-          "tags": {
-            "en": ["Mozilla Foundation Award 2021", "Digital Commons", "Community IP"],
-            "de": ["Mozilla Award 2021", "Open Source"]
-          },
-          "desc": {
-            "en": "We expanded access to the Benin Bronzes for a whole continent of users, artists and communities using 3D scanning and accessible mixed reality experiences.",
-            "de": "Wir digitalisierten und open-sourceten die Benin-Bronzen. Eine Provokation über den Besitz von Kulturerbe."
-          },
-          "year": {
-            "en": "2021 · Mozilla Creative Media Award",
-            "de": "2021 · Mozilla Creative Media Award"
-          },
-          "cta": {
-            "en": "View",
-            "de": "Anfragen"
-          }
+      "card": {
+        "tags": {
+          "en": ["Mozilla Foundation Award 2021", "Digital Commons", "Community IP"],
+          "de": ["Mozilla Award 2021", "Open Source"]
+        },
+        "desc": {
+          "en": "We expanded access to the Benin Bronzes for a whole continent of users, artists and communities using 3D scanning and accessible mixed reality experiences.",
+          "de": "Wir digitalisierten und open-sourceten die Benin-Bronzen. Eine Provokation über den Besitz von Kulturerbe."
+        },
+        "year": {
+          "en": "2021 · Mozilla Creative Media Award",
+          "de": "2021 · Mozilla Creative Media Award"
+        },
+        "cta": {
+          "en": "View",
+          "de": "Anfragen"
         }
-      },
+      }
+    },
     "workshop": {
       "title": {
         "en": "3D Scanning & Cultural Archiving Workshop",
