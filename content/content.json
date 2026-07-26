@@ -18,17 +18,16 @@
         "play regenerates",
         "communities thrive",
         "biodiversity wins",
-        ""
       ],
       "de": [
-        "matriarchy leads",
-        "artists flourish",
-        "culture connects",
-        "collaboration wins",
-        "techn's kind",
-        "youth thrive",
-        "play heals",
-        "communities win"
+        "de-matriarchy leads",
+        "de-artists flourish",
+        "de-culture connects",
+        "de-collaboration wins",
+        "de-tech's kind",
+        "de-youth thrive",
+        "de-play heals",
+        "de-communities win"
       ]
     },
     "sub": {
@@ -44,7 +43,7 @@
       "de": "Mission"
     },
     "statement": {
-      "en": "The Future Depends On<br><em>Connected, Empowered and Resilient</em> Communities.",
+      "en": "Empowering <em>Connected, Resilient,<br>Deeply-Rooted</em> Communities With Creative Technology.",
       "de": "Wir haben keine Missionserklärung.<br>Wir haben einen <em>Zweck.</em>"
     },
     "columns": [
@@ -86,20 +85,20 @@
       "de": "Mit wem wir arbeiten"
     },
     "headline": {
-      "en": "Optimists. Organizations and Artists Committed to Meaningful Change.",
+      "en": "Activists, Artists and Communities Committed to Meaningful Change.",
       "de": "Manche haben Kunden.<br>Wir haben Mitgestalter."
     },
     "stats": [
       {
         "number": "156+ MM",
         "label": {
-          "en": "Objects liberated from cultural institutions through open-source activations",
+          "en": "Objects liberated from cultural institutions through digital heists & open-source activations.",
           "de": "Jährliche Einsparungen je Museum durch SammelSucht"
         }
       },{
         "number": "$450K",
         "label": {
-          "en": "Paid to BIPOC artists & collaborators through our partnerships",
+          "en": "Paid to BIPOC artists & collaborators through our partnerships.",
           "de": "Der QueerenciaNM-Teilnehmenden waren LGBTQ+-Jugendliche aus dem ländlichen NM"
         }
       },
@@ -113,7 +112,7 @@
       {
         "number": "10%",
         "label": {
-          "en": "of our revenue directly supports non-profits, education and artists.",
+          "en": "of our revenue directly supports non-profits, education and artists through our fiscal sponsor.",
           "de": "Benin-Bronze-Scans hinter einer Bezahlschranke. Alle offen lizenziert."
         }
       }
@@ -154,13 +153,13 @@
         "de": "Queer Icons New Mexico"
       },
       "desc": {
-        "en": "A quick look at how this project blends public art, mixed reality, and community storytelling.",
+        "en": "Bringing together creative research, art and public health programming to support queer, rural youth.",
         "de": "Ein kurzer Einblick, wie dieses Projekt öffentliche Kunst, Mixed Reality und Community Storytelling verbindet."
       },
       "image": "images/case-queerencia.png",
       "bullets": {
         "en": [
-          "'Animating archives' through a statewide QTPOC+ youth art program",
+          "Statewide QTPOC+ youth art program to designed to strengthen communities",
           "Blending art and mixed reality to preserve intergenerational LGBTQ+ stories",
           "Co-created with artists, community partners, and NIH-supported collaborators"
         ],
@@ -177,7 +176,7 @@
             "de": "Highlight"
           },
           "tags": {
-            "en": ["LGBTQ+ Youth", "AR", "Arts Therapy", "2024"],
+            "en": ["LGBTQ+", "Youth", "Mixed Reality", "Public Programming", "2024"],
             "de": ["LGBTQ+ Jugend", "AR", "Kunsttherapie", "2024"]
           },
           "desc": {
@@ -200,13 +199,13 @@
         "de": "SammelSucht"
       },
       "desc": {
-        "en": "How we turned hidden museum collections into a playful AR experience.",
+        "en": "Transforming hidden museum collections into a playful XR visitor experience.",
         "de": "Wie wir verborgene Museumssammlungen in ein spielerisches AR-Erlebnis verwandelt haben."
       },
       "image": "images/case-sammelsucht.png",
       "bullets": {
         "en": [
-          "'Pokémon Go for art' - turns museum collections into playable AR experiences",
+          "'Pokémon Go for art' - reimagines museum collections as an AR game",
           "Brings 95% of hidden museum archives into public view",
           "Built and tested with leading institutions across the US and Europe"
         ],
@@ -218,8 +217,8 @@
       },
         "card": {
           "tags": {
-            "en": ["Museum Tech", "AR / 3D"],
-            "de": ["Museumstechnologie", "AR / 3D"]
+            "en": ["Museum Tech", "Mixed Reality", "Education"],
+            "de": ["Museumstechnologie", "Mixed Reality", "Digital Product"]
           },
           "desc": {
             "en": "\"Pokémon Go for art.\" Mobile AR app letting museums showcase hidden collections. Frankfurt World Culture Museum + Berlin State Museums. Saves up to $200K/yr.",
@@ -241,15 +240,15 @@
         "de": "Loot Co"
       },
       "desc": {
-        "en": "A research case study on cultural technology, access, and reparative methods.",
+        "en": "reparative methods.",
         "de": "Eine Research-Fallstudie zu Kulturtechnologie, Zugang und reparativen Methoden."
       },
       "image": "images/case-loot.png",
       "bullets": {
         "en": [
-          "'Reparative piracy'—reimagining museum archives through 3D scanning and storytelling",
-          "Creating accessible tools for communities to co-design and remix digital collections",
-          "In collaboration with the Smithsonian and Mozilla to rethink ownership, access, and IP"
+          "Digital repatriation that centers African creativity",
+          "Accessible tools for communities to co-design and remix cultural collections",
+          "Collaboration with the Smithsonian and Mozilla Foundation"
         ],
         "de": [
           "'Reparative Piraterie' – Museumarchive durch 3D-Scanning und Storytelling neu denken",
@@ -259,11 +258,11 @@
       },
         "card": {
           "tags": {
-            "en": ["Mozilla Award 2021", "Open Source"],
+            "en": ["Mozilla Foundation Award 2021", "Digital Commons", "Community IP"],
             "de": ["Mozilla Award 2021", "Open Source"]
           },
           "desc": {
-            "en": "We digitally pirated and open-sourced the Benin Bronzes using 3D scanning, GAN modeling, and social AR. A provocation about who owns cultural heritage.",
+            "en": "We expanded access to the Benin Bronzes for a whole continent of users, artists and communities using 3D scanning and accessible mixed reality experiences.",
             "de": "Wir digitalisierten und open-sourceten die Benin-Bronzen. Eine Provokation über den Besitz von Kulturerbe."
           },
           "year": {
@@ -287,7 +286,7 @@
           "de": ["3D Scanning", "Kulturarchivierung", "Workshop"]
         },
         "desc": {
-          "en": "Hands-on intensive for cultural institutions, educators, and communities. Participants learn to digitize, archive, and reactivate cultural objects using photogrammetry, AR, and open-source tools — developed from a decade of field work across four continents.",
+          "en": "A hands-on intensive for cultural institutions, educators, and communities. Participants learn to digitize, archive, and reactivate cultural objects through a decolonial lens — developed through a decade of cultural collaboration and field work with Indigenous communities in North America, Europe, Africa and Asia.",
           "de": "Praxisintensiv für Kulturinstitutionen, Pädagogen und Gemeinschaften. Photogrammetrie, AR und Open-Source-Tools — entwickelt aus einem Jahrzehnt Feldarbeit auf vier Kontinenten."
         },
         "year": {
@@ -295,7 +294,7 @@
           "de": "Weltweit verfügbar"
         },
         "cta": {
-          "en": "Contact",
+          "en": "Learn More",
           "de": "Kontakt"
         }
       }
@@ -305,11 +304,11 @@
     "sectionLabel": { "en": "Contact", "de": "Kontakt" },
     "headline": { "en": "Let's build<br>something.", "de": "Lass uns etwas<br>aufbauen." },
     "lede": {
-      "en": "We work with cultural organizations, museums, festivals, universities, and mission-aligned companies. If that's you — let's talk. No pitch decks required.",
+      "en": "We love collaborating with cultural organizations, museums, festivals, universities, and mission-aligned companies who want to build inclusive programs to connect with their community.",
       "de": "Wir arbeiten mit Kulturorganisationen, Museen, Festivals, Universitäten und werteorientierten Unternehmen. Wenn das auf Sie zutrifft — melden Sie sich."
     },
     "basedInLabel": { "en": "Based in", "de": "Standort" },
-    "basedInValue": { "en": "New Mexico, USA · Global", "de": "New Mexico, USA · Weltweit" },
+    "basedInValue": { "en": "Oakland, California | Santa Fe, New Mexico, USA · Global", "de": "New Mexico, USA · Weltweit" },
     "form": {
       "nameLabel": { "en": "Name", "de": "Name" },
       "organizationLabel": { "en": "Organization", "de": "Organisation" },
@@ -321,13 +320,13 @@
       "emailPlaceholder": { "en": "you@example.com", "de": "you@example.de" },
       "messagePlaceholder": { "en": "Tell us about your project...", "de": "Erzählen Sie uns von Ihrem Projekt..." },
       "privacy": {
-        "en": "Your data is used only to respond to your inquiry and is never sold or shared. By submitting you agree to our",
+        "en": "We use data shared through this form to respond to your inquiry. We won't ever sell your info. Learn about our ",
         "de": "Ihre Daten werden nur zur Beantwortung Ihrer Anfrage verwendet. Durch das Absenden stimmen Sie unserer"
       },
       "submit": { "en": "Send message", "de": "Nachricht senden" },
       "sending": { "en": "Sending...", "de": "Wird gesendet..." },
-      "success": { "en": "✓ Message sent. We’ll be in touch soon.", "de": "✓ Nachricht gesendet. Wir melden uns bald." },
-      "error": { "en": "Please complete name, email, and message.", "de": "Bitte füllen Sie Name, E-Mail und Nachricht aus." },
+      "success": { "en": "✓ Message sent. We’ll be in touch.", "de": "✓ Nachricht gesendet. Wir melden uns bald." },
+      "error": { "en": "Please confirm your name, email, and message fields are correct.", "de": "Bitte füllen Sie Name, E-Mail und Nachricht aus." },
       "options": {
         "commission": { "en": "Commission / New project", "de": "Auftrag / Neues Projekt" },
         "workshop": { "en": "Book a workshop", "de": "Workshop buchen" },
@@ -338,9 +337,9 @@
     }
   },
   "newsletter": {
-    "title": { "en": "Get the occasional dispatch.", "de": "Den gelegentlichen Newsletter erhalten." },
+    "title": { "en": "Get the occasional update.", "de": "Den gelegentlichen Newsletter erhalten." },
     "body": {
-      "en": "New projects, open-source drops, workshop dates. We don't send much — but when we do, it's worth it.",
+      "en": "New projects, open-source releases, workshop dates and things created by people we love - sent a few times a year",
       "de": "Neue Projekte, Open-Source-Releases, Workshop-Termine. Wir schreiben selten — aber dann lohnt es sich."
     },
     "placeholder": { "en": "your@email.com", "de": "your@email.com" },
@@ -356,7 +355,7 @@
   },
   "gdpr": {
     "text": {
-      "en": "We use minimal analytics to understand how visitors find us. No tracking cookies, no advertising. By continuing you agree to our privacy policy.",
+      "en": "We use less-intrusive analytics to understand how visitors find us, with minimal cookies and a privacy policy written, reviewed mostly by human beings (and a cat who stepped on the key board). Our privacy policy",
       "de": "Wir verwenden minimale Analysen. Keine Tracking-Cookies, keine Werbung. Durch die weitere Nutzung stimmen Sie unserer Datenschutzrichtlinie zu."
     },
     "decline": {
