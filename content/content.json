@@ -43,7 +43,7 @@
       "de": "Mission"
     },
     "statement": {
-      "en": "Empowering <em>Connected, Resilient,<br>Deeply-Rooted</em> Communities With Creative Technology.",
+      "en": "Empowering <em>Connected, Resilient, Deeply-Rooted</em> Communities With Creative Technology and Infrastructure.",
       "de": "Wir haben keine Missionserklärung.<br>Wir haben einen <em>Zweck.</em>"
     },
     "columns": [
@@ -104,7 +104,7 @@
         }
       },
       {
-        "number": "300",
+        "number": "300+",
         "label": {
           "en": "Community archivists and cultural leaders trained in 3D scanning and metadata annotation.",
           "de": "AR-Filter-Impressionen in 30 Tagen. Ohne Werbung."
@@ -309,7 +309,7 @@
       "de": "Wir arbeiten mit Kulturorganisationen, Museen, Festivals, Universitäten und werteorientierten Unternehmen. Wenn das auf Sie zutrifft — melden Sie sich."
     },
     "basedInLabel": { "en": "Based in", "de": "Standort" },
-    "basedInValue": { "en": "Oakland, California | Santa Fe, New Mexico, USA · Global", "de": "New Mexico, USA · Weltweit" },
+    "basedInValue": { "en": "California · New Mexico · Working Globally", "de": "New Mexico, USA · Weltweit" },
     "form": {
       "nameLabel": { "en": "Name", "de": "Name" },
       "organizationLabel": { "en": "Organization", "de": "Organisation" },
