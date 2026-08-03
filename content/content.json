@@ -160,7 +160,7 @@
       "image": "images/case-queerencia.png",
       "bullets": {
         "en": [
-          "Statewide QTPOC+ youth art program to designed to strengthen communities safety and resilience",
+          "Statewide QTPOC+ youth art program to designed to strengthen community safety and resilience",
           "Blending art and mixed reality to preserve intergenerational LGBTQ+ stories",
           "Co-created with artists, community partners, and NIH-supported collaborators"
         ],
@@ -200,7 +200,7 @@
         "de": "SammelSucht"
       },
       "desc": {
-        "en": "An augmented reality app that transforms hidden museum collections into an playful visitor experience.",
+        "en": "An augmented reality app that transforms hidden museum collections into a playful visitor experience.",
         "de": "Wie wir verborgene Museumssammlungen in ein spielerisches AR-Erlebnis verwandelt haben."
       },
       "image": "images/case-sammelsucht.png",
@@ -241,7 +241,7 @@
         "de": "Loot Co"
       },
       "desc": {
-        "en": "reparative methods.",
+        "en": "Reparative piracy project that digitally copies and open-sources controversial looted objects in museum collections (like the Benin Bronzes) for community creativity.",
         "de": "Eine Research-Fallstudie zu Kulturtechnologie, Zugang und reparativen Methoden."
       },
       "image": "images/case-loot.png",
@@ -356,7 +356,7 @@
   },
   "gdpr": {
     "text": {
-      "en": "We use less-intrusive analytics to understand how visitors find us, with minimal cookies and a privacy policy written, reviewed mostly by human beings (and a cat who stepped on the key board). Our privacy policy",
+      "en": "We use less-intrusive analytics to understand how visitors find us, with minimal cookies and a privacy policy written, reviewed mostly by human beings (and a cat who stepped on the keyboard). Our privacy policy",
       "de": "Wir verwenden minimale Analysen. Keine Tracking-Cookies, keine Werbung. Durch die weitere Nutzung stimmen Sie unserer Datenschutzrichtlinie zu."
     },
     "decline": {
