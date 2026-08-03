@@ -53,7 +53,7 @@
           "de": "Woran wir glauben"
         },
         "body": {
-          "en": "Empowered, authentic communities are critical to building a better world. We’ve facilitated and supported cultural organizations, artists and communities across North America, Europe, Asia, and Africa.",
+          "en": "Empowered, authentic communities are critical to building a better world. We help them design the infrastructure, tools they need to overcome imbalanced systems and build more caring, considerate ecosystems.",
           "de": "Spiel verbindet und heilt Gemeinschaft. Kulturerbe gehört den Menschen, die es geschaffen haben. Technologie sollte ein Vorteil für diejenigen sein, die das System ignoriert."
         }
       },
@@ -63,7 +63,7 @@
           "de": "Für wen wir arbeiten"
         },
         "body": {
-          "en": "Optimists who are hungry for a better future that works for everyone. We work with communities to design the infrastructure, tools they need to overcome imbalanced systems and build more caring, considerate ecosystems.",
+          "en": "Optimists who are hungry for a better future that works for everyone. We work with cultural organizations, artists and activist communities across North America, Europe, Asia, and Africa.",
           "de": "Optimisten, die eine bessere Zukunft wollen. Museen, die ihre Sammlungen dekolonisieren wollen. Gemeinschaften, die ihre eigenen Geschichten besitzen wollen."
         }
       },
@@ -160,7 +160,7 @@
       "image": "images/case-queerencia.png",
       "bullets": {
         "en": [
-          "Statewide QTPOC+ youth art program to designed to strengthen communities",
+          "Statewide QTPOC+ youth art program to designed to strengthen communities safety and resilience",
           "Blending art and mixed reality to preserve intergenerational LGBTQ+ stories",
           "Co-created with artists, community partners, and NIH-supported collaborators"
         ],
@@ -177,11 +177,11 @@
           "de": "Highlight"
         },
         "tags": {
-          "en": ["LGBTQ+", "Youth", "Mixed Reality", "Public Programming", "2024"],
+          "en": ["LGBTQ+", "Youth", "Mixed Reality", "Public Programming", "Digital Archiving"],
           "de": ["LGBTQ+ Jugend", "AR", "Kunsttherapie", "2024"]
         },
         "desc": {
-          "en": "Art therapy and AR photobooth for rural LGBTQ+ youth in New Mexico. Co-designed with UNM, Moving Arts, and artist Gabriel García Román. Youth created multimedia self-portraits celebrated at public gallery openings statewide.",
+          "en": "Expressive art therapy program for rural LGBTQ+ youth using Community-based Participatory Research, co-designed with University of New Mexico and artist/activist Gabriel García Román.",
           "de": "Kunsttherapie und AR-Fotokabine für LGBTQ+-Jugendliche im ländlichen New Mexico. Mitgestaltet mit UNM, Moving Arts und Künstler Gabriel García Román."
         },
         "year": {
@@ -200,14 +200,14 @@
         "de": "SammelSucht"
       },
       "desc": {
-        "en": "Transforming hidden museum collections into a playful XR visitor experience.",
+        "en": "An augmented reality app that transforms hidden museum collections into an playful visitor experience.",
         "de": "Wie wir verborgene Museumssammlungen in ein spielerisches AR-Erlebnis verwandelt haben."
       },
       "image": "images/case-sammelsucht.png",
       "bullets": {
         "en": [
-          "'Pokémon Go for art' - reimagines museum collections as an AR game",
-          "Brings 95% of hidden museum archives into public view",
+          "3D AR/VR viewer that integrates seamlessly into digital archives and metadata collections",
+          "Allows museums to bypass space limitations and showcase entire collections ",
           "Built and tested with leading institutions across the US and Europe"
         ],
         "de": [
@@ -218,11 +218,11 @@
       },
       "card": {
         "tags": {
-          "en": ["Museum Tech", "Mixed Reality", "Education"],
+          "en": ["Museum Tech", "Mixed Reality", "Education", "Installations"],
           "de": ["Museumstechnologie", "Mixed Reality", "Digital Product"]
         },
         "desc": {
-          "en": "\"Pokémon Go for art.\" Mobile AR app letting museums showcase hidden collections. Frankfurt World Culture Museum + Berlin State Museums. Saves up to $200K/yr.",
+          "en": "Collecting Crave is an asset-viewing platform (disguised as a fun, mobile game) that allows cultural institutions to showcase their entire collection using augmented reality and 3D web technology.",
           "de": "\"Pokémon Go für Kunst.\" AR-App für Museen. Spart bis zu 200.000 $/Jahr."
         },
         "year": {
@@ -247,9 +247,9 @@
       "image": "images/case-loot.png",
       "bullets": {
         "en": [
-          "Digital repatriation that centers African creativity",
-          "Accessible tools for communities to co-design and remix cultural collections",
-          "Collaboration with the Smithsonian and Mozilla Foundation"
+          "Digital repatriation that centers African creativity and data sovereignty",
+          "Accessible DIY 3D scanning, hosting program, tools created to help communities remix cultural collections",
+          "Collaboration with the Smithsonian, Mozilla Foundation and hundreds of culturally-competent archivists"
         ],
         "de": [
           "'Reparative Piraterie' – Museumarchive durch 3D-Scanning und Storytelling neu denken",
@@ -259,11 +259,11 @@
       },
       "card": {
         "tags": {
-          "en": ["Mozilla Foundation Award 2021", "Digital Commons", "Community IP"],
+          "en": ["Repatriation", "Cultural Collaborations" "Digital Commons", "Community IP"],
           "de": ["Mozilla Award 2021", "Open Source"]
         },
         "desc": {
-          "en": "We expanded access to the Benin Bronzes for a whole continent of users, artists and communities using 3D scanning and accessible mixed reality experiences.",
+          "en": "A Digital Repatriations project that digitally copies and open-sources controversial looted objects in museum collections (like the Benin Bronzes) using 3D scanning, AI and emerging technology.",
           "de": "Wir digitalisierten und open-sourceten die Benin-Bronzen. Eine Provokation über den Besitz von Kulturerbe."
         },
         "year": {
@@ -283,11 +283,11 @@
       },
       "card": {
         "tags": {
-          "en": ["3D Scanning", "Cultural Archiving", "Workshop"],
+          "en": ["3D Scanning", "Cultural Archiving", "Community Workshop", "Professional Training"],
           "de": ["3D Scanning", "Kulturarchivierung", "Workshop"]
         },
         "desc": {
-          "en": "A hands-on intensive for cultural institutions, educators, and communities. Participants learn to digitize, archive, and reactivate cultural objects through a decolonial lens — developed through a decade of cultural collaboration and field work with Indigenous communities in North America, Europe, Africa and Asia.",
+          "en": "A hands-on intensive for cultural institutions, educators, and communities. Participants learn to digitize, archive, and reactivate cultural objects through a decolonial lens, developed through a decade of cultural collaboration and field work with Indigenous communities and cultural experts in North America, Europe, Africa and Asia.",
           "de": "Praxisintensiv für Kulturinstitutionen, Pädagogen und Gemeinschaften. Photogrammetrie, AR und Open-Source-Tools — entwickelt aus einem Jahrzehnt Feldarbeit auf vier Kontinenten."
         },
         "year": {

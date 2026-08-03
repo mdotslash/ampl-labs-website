@@ -1,6 +1,11 @@
-# AMPL Labs Site Snapshot 5/7
+# AMPL Labs Site Snapshot 
 
-# Changelog — v4.2
+# Changelog - v5 8/3
+
+## Changed
+- Case study and copy ready for german localization
+
+# Changelog — v4.2 5/7
 
 ## Changed
 - Case study card footer (`.case-footer`, `.case-featured-footer`) stacks vertically on mobile — year above button, 12px gap — was side-by-side
