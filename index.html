@@ -54,14 +54,6 @@
 
   /* ─── LANG TOGGLE ─── */
   
-  #lang-toggle {
-  display: none;
-}
-
-  
-  /*
-  Replace when DE is ready
-  
   #lang-toggle { display: flex; border: 1px solid var(--border); flex-shrink: 0; }
   .lang-btn {
     font-family: 'DM Sans', sans-serif; letter-spacing: 0.1em;
@@ -237,24 +229,27 @@ nav {
   }
 
   .nav-logo {
-/*    justify-self: start;*/
+    justify-self: start;
     max-width: 120px;
+    grid-column: 1;
   }
 
   #lang-toggle {
     justify-self: center;
+    grid-column: 2;
   }
 
   .mobile-menu-toggle {
     justify-self: end;
     display: inline-flex;
+    grid-column: 3;
   }
 
   .nav-links,
   .nav-cta {
     display: none;
+    }
   }
-}
 
   /* ─── HERO ─── */
   #hero {
@@ -886,10 +881,10 @@ nav {
     <li><a href="#contact" data-i18n="nav.contact"></a></li>
   </ul>
 
-  <div id="lang-toggle" role="group" aria-label="Language">
+  <!-- <div id="lang-toggle" role="group" aria-label="Language">
     <button class="lang-btn active" onclick="setLang('en')">EN</button>
     <button class="lang-btn" onclick="setLang('de')">DE</button>
-  </div>
+  </div> -->
 
   <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
     <span></span>
