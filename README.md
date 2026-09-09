@@ -1,5 +1,25 @@
 # AMPL Labs Site Snapshot 
 
+# Changelog — v5.1 — Digital Collections Intensive (9/9/2026)
+
+## Added
+- Added `digital-collections-intensive/` as a new workshop landing page within the main AMPL Labs repository
+- Added workshop-specific assets and interactive XR content
+
+## Changed
+- Standardized form text hierarchy using existing site color variables
+- Added visible keyboard focus states to form controls
+- Standardized card/body typography
+- Standardized interactive control styling
+- Standardized transition timing
+- Cleaned up legacy AR button CSS
+
+## Notes
+- Workshop is served from the main GitHub Pages site at:
+  `https://ampllabs.org/digital-collections-intensive/`
+- No existing AMPL Labs site copy or functionality was changed
+- Workshop copy was preserved as provided
+- 
 # Changelog - v5 8/3
 
 ## Changed
