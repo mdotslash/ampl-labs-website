@@ -1,0 +1,2040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Decolonizing Digital Collections Intensive offered by AMPL Labs in Santa Fe, New Mexico or Remote. A professional intensive for artists focused on digital archiving, 3D scanning, cultural sovereignty and restorative infrastructure.">
+    <title>Digital Collections, 3D Archiving Intensive for Artists | AMPL Labs Workshop</title>
+
+    <!-- AMPL Labs typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500&display=swap" rel="stylesheet">
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
+    <style>
+        :root {
+            --black: #0d0d0d;
+            --black-soft: #0a0a0a;
+            --black-deep: #050505;
+            --black-pure: #000;
+            --white: #f5f2ea;
+
+            --accent: #e8ff47;
+            --accent-dim: #c8dd3e;
+
+            --border: rgba(245, 242, 234, 0.12);
+            --border-strong: rgba(232, 255, 71, 0.28);
+            --border-accent: rgba(232, 255, 71, 0.4);
+
+            --card-bg: #141414;
+
+            /* AMPL Labs text hierarchy */
+            --muted: rgba(245, 242, 234, 0.62);
+            --muted-soft: rgba(245, 242, 234, 0.48);
+
+            --nav-bg: rgba(13, 13, 13, 0.9);
+
+            --max-width: 1400px;
+            --side-gutter: 48px;
+
+            --transition-fast: 0.2s ease;
+            --transition-card: 0.25s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--black);
+            color: var(--white);
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 300;
+            font-size: 17px;
+            line-height: 1.65;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img,
+        iframe,
+        model-viewer {
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font: inherit;
+        }
+
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 4px;
+        }
+
+        .container {
+            width: min(100%, var(--max-width));
+            margin: 0 auto;
+        }
+
+        .hidden-frame {
+            display: none;
+        }
+
+        /* ─── TYPOGRAPHY ─── */
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            line-height: 0.98;
+        }
+
+        p + p {
+            margin-top: 20px;
+        }
+
+        .eyebrow,
+        .section-label,
+        .card-number,
+        .xr-caption {
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+        }
+
+        .eyebrow {
+            color: var(--accent-dim);
+            font-size: 14px;
+        }
+
+        .section-label {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            color: var(--accent-dim);
+            font-size: 14px;
+            margin-bottom: 44px;
+        }
+
+        .section-label::before {
+            content: '';
+            width: 32px;
+            height: 1px;
+            background: var(--accent-dim);
+            flex: 0 0 auto;
+        }
+
+        .section-headline,
+        .opportunity-intro h2,
+        .case-intro h2,
+        .host-copy h2,
+        .contact-heading h2,
+        .xr-heading h2 {
+            font-size: clamp(42px, 5vw, 70px);
+        }
+
+        /* ─── SHARED SECTIONS ─── */
+
+        .section {
+            padding: 110px var(--side-gutter);
+            border-top: 1px solid var(--border);
+        }
+
+        /* ─── NAVIGATION ─── */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 400;
+            background: var(--nav-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-inner {
+            width: min(100%, var(--max-width));
+            margin: 0 auto;
+            padding: 20px var(--side-gutter);
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 24px;
+            letter-spacing: 0.08em;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a,
+        .nav-contact {
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 13px;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            transition: opacity var(--transition-fast), color var(--transition-fast);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-contact {
+            color: var(--black);
+            background: var(--accent);
+            padding: 9px 18px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: opacity var(--transition-fast);
+        }
+
+        .nav-contact:hover {
+            opacity: 0.85;
+        }
+
+        /* ─── HERO ─── */
+
+        header {
+            min-height: 100vh;
+            min-height: 100svh;
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+            overflow: hidden;
+            padding: 180px var(--side-gutter) 90px;
+            background: var(--black);
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-bg-img {
+            position: absolute;
+            inset: 0;
+            background-image: url('assets/images/hero-1.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.68;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(
+                    ellipse 55% 55% at 72% 35%,
+                    rgba(232, 255, 71, 0.055) 0%,
+                    transparent 65%
+                ),
+                linear-gradient(
+                    to top,
+                    rgba(13, 13, 13, 0.95) 0%,
+                    rgba(13, 13, 13, 0.52) 48%,
+                    rgba(13, 13, 13, 0.42) 100%
+                );
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: min(100%, 1100px);
+        }
+
+        .hero-eyebrow {
+            margin-bottom: 26px;
+        }
+
+        .hero-title {
+            font-size: clamp(50px, 8vw, 120px);
+            max-width: 1050px;
+            line-height: 0.88;
+            letter-spacing: 0.015em;
+        }
+
+        .hero-title .accent {
+            color: var(--accent);
+        }
+
+        .hero-description {
+            max-width: 620px;
+            margin-top: 30px;
+            font-size: clamp(20px, 1.4vw, 24px);
+            line-height: 1.7;
+            color: var(--muted);
+        }
+
+        .hero-actions {
+            margin-top: 38px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        /* ─── BUTTONS ─── */
+
+        .btn-primary,
+        .btn-secondary {
+            display: inline-block;
+            padding: 12px 26px;
+            border: 1px solid transparent;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition:
+                opacity var(--transition-fast),
+                border-color var(--transition-fast),
+                background var(--transition-fast);
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--black);
+            border-color: var(--accent);
+        }
+
+        .btn-primary:hover {
+            opacity: 0.85;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border-color: var(--border-accent);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent);
+        }
+
+        .form-submit {
+            align-self: flex-start;
+        }
+
+        /* ─── OPPORTUNITY ─── */
+
+        #opportunity {
+            background: var(--black-soft);
+        }
+
+        .opportunity-intro {
+            max-width: 1000px;
+            margin-bottom: 64px;
+        }
+
+        .opportunity-intro h2 {
+            margin-bottom: 22px;
+        }
+
+        .opportunity-intro p {
+            max-width: 900px;
+            color: var(--muted);
+            font-size: 18px;
+        }
+
+        .opportunity-video {
+            margin-top: 48px;
+        }
+
+        .training-card,
+        .curriculum-card,
+        .case-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            transition: border-color var(--transition-card);
+        }
+
+        .training-card:hover,
+        .curriculum-card:hover,
+        .case-card:hover {
+            border-color: var(--border-strong);
+        }
+
+        .training-card {
+            padding: 42px;
+        }
+
+        .training-card h3 {
+            font-size: clamp(30px, 3vw, 44px);
+            margin-bottom: 22px;
+        }
+
+        .training-card > p,
+        .training-list li {
+            color: var(--muted);
+        }
+
+        .training-list {
+            padding-left: 24px;
+            display: grid;
+            gap: 14px;
+        }
+
+        .training-list strong {
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        /* ─── CURRICULUM ─── */
+
+        #training {
+            background: var(--black);
+        }
+
+        .curriculum-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2px;
+            margin-top: 56px;
+        }
+
+        .curriculum-card {
+            padding: 38px;
+            min-height: 300px;
+        }
+
+        .card-number {
+            display: block;
+            color: var(--accent-dim);
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 32px;
+        }
+
+        .curriculum-card h3 {
+            font-size: clamp(28px, 3vw, 42px);
+            margin-bottom: 18px;
+        }
+
+        .curriculum-card p {
+            color: var(--muted);
+        }
+
+        .curriculum-card strong {
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        /* ─── CASE STUDY ─── */
+
+        #case-study {
+            background: var(--black-soft);
+        }
+
+        .case-intro {
+            max-width: 920px;
+        }
+
+        .case-intro h2 {
+            margin-bottom: 20px;
+        }
+
+        .case-intro p {
+            color: var(--muted);
+            font-size: 18px;
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            margin-top: 58px;
+        }
+
+        .case-card {
+            padding: 32px;
+            min-height: 250px;
+        }
+
+        .case-card h3 {
+            font-size: clamp(27px, 2.7vw, 39px);
+            margin-bottom: 14px;
+        }
+
+        .case-card p {
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        /* ─── VIMEO ─── */
+
+        .case-video-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: var(--black-pure);
+            margin-top: 58px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .case-video-wrapper iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .mute-btn {
+            position: absolute;
+            right: 18px;
+            bottom: 18px;
+            z-index: 10;
+            padding: 9px 14px;
+            border: 1px solid var(--border);
+            background: rgba(13, 13, 13, 0.88);
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 11px;
+            cursor: pointer;
+            transition: border-color var(--transition-fast), color var(--transition-fast);
+        }
+
+        .mute-btn:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        /* ─── XR PLAYGROUND ─── */
+
+        #xr-playground {
+            background: var(--black-deep);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 110px var(--side-gutter);
+        }
+
+        .xr-heading {
+            max-width: 900px;
+            margin-bottom: 52px;
+        }
+
+        .xr-heading h2 {
+            margin-bottom: 20px;
+        }
+
+        .xr-heading p {
+            max-width: 800px;
+            margin: 0;
+            color: var(--muted);
+            font-size: 18px;
+            line-height: 1.65;
+        }
+
+        .carousel-container {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.45, 0, 0.55, 1);
+            will-change: transform;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            flex: 0 0 100%;
+        }
+
+        .xr-frame-wrapper {
+            width: 100%;
+            height: 600px;
+            background:
+                radial-gradient(
+                    circle at 50% 42%,
+                    #1d1d1d 0%,
+                    #090909 62%,
+                    #000 100%
+                );
+            border: 1px solid var(--border);
+            position: relative;
+        }
+
+        model-viewer {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .ar-button {
+            background: rgba(13, 13, 13, 0.88);
+            color: var(--white);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 20px;
+            padding: 9px 14px;
+            border: 1px solid var(--border);
+            border-radius: 0;
+            cursor: pointer;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            white-space: nowrap;
+            transition: border-color var(--transition-fast), color var(--transition-fast);
+        }
+
+        .ar-button:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .xr-caption {
+            margin-top: 15px;
+            color: var(--muted-soft);
+            font-size: 11px;
+        }
+
+        .carousel-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 28px;
+        }
+
+        .nav-btn {
+            background: transparent;
+            color: var(--white);
+            border: 1px solid var(--border);
+            padding: 10px 18px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 11px;
+            transition: border-color var(--transition-fast), color var(--transition-fast);
+        }
+
+        .nav-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .carousel-status {
+            min-width: 80px;
+            text-align: center;
+            color: var(--muted-soft);
+            font-size: 11px;
+            letter-spacing: 0.08em;
+        }
+
+        /* ─── HOST ─── */
+
+        #host {
+            background: var(--black);
+        }
+
+        .host-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .host-image {
+            background: var(--black-pure);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            aspect-ratio: 4 / 3;
+        }
+
+        .host-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            opacity: 0.9;
+        }
+
+        .host-copy h2 {
+            margin-bottom: 20px;
+        }
+
+        .host-copy p {
+            max-width: 650px;
+            color: var(--muted);
+            font-size: 18px;
+        }
+
+        /* ─── ENROLLMENT ─── */
+
+        #enrollment {
+            background: var(--black-soft);
+            text-align: center;
+        }
+
+        .enrollment-inner {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .enrollment-inner h2 {
+            font-size: clamp(48px, 6vw, 78px);
+            margin-bottom: 20px;
+        }
+
+        .enrollment-inner p {
+            max-width: 680px;
+            margin: 0 auto;
+            color: var(--muted);
+            font-size: 18px;
+        }
+
+        .award {
+            color: var(--accent);
+        }
+
+        .enrollment-action {
+            margin-top: 34px;
+        }
+
+        /* ─── CONTACT FORM ─── */
+
+        #contact {
+            background: var(--black);
+        }
+
+        .contact-heading {
+            margin-bottom: 16px;
+        }
+
+        .contact h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            margin-top: 16px;
+            align-items: start;
+        }
+
+        .contact-lede {
+            line-height: 1.75;
+            opacity: 0.65;
+            margin-bottom: 32px;
+        }
+
+        .contact-detail {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .contact-item-label {
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            opacity: 0.5;
+        }
+
+        .contact-item-value {
+            opacity: 0.75;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-label {
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            opacity: 0.5;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 300;
+            color: var(--white);
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 12px 16px;
+            outline: none;
+            transition: border-color var(--transition-fast);
+            width: 100%;
+            appearance: none;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            border-color: var(--border-accent);
+        }
+
+        .form-select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23f5f2ea' stroke-width='1.5'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            padding-right: 40px;
+            cursor: pointer;
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-privacy {
+            opacity: 0.5;
+            line-height: 1.5;
+        }
+
+        .form-privacy a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        #form-status {
+            padding: 12px 16px;
+            border: 1px solid var(--border);
+            display: none;
+        }
+
+        #form-status.success {
+            display: block;
+            border-color: rgba(100, 220, 130, 0.3);
+            color: #64dc82;
+        }
+
+        #form-status.error {
+            display: block;
+            border-color: rgba(232, 80, 80, 0.3);
+            color: #e85050;
+        }
+
+        /* ─── FOOTER ─── */
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 48px var(--side-gutter);
+            background: var(--black);
+        }
+
+        .footer-inner {
+            width: min(100%, var(--max-width));
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .footer-logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 28px;
+            letter-spacing: 0.08em;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .footer-location,
+        .footer-copy {
+            color: var(--muted-soft);
+            font-size: 12px;
+            letter-spacing: 0.05em;
+        }
+
+        /* ─── ANIMATION ─── */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: revealUp 0.7s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.12s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.24s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.36s;
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes revealUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ─── REDUCED MOTION ─── */
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+
+            .reveal,
+            .fade-up {
+                opacity: 1;
+                transform: none;
+            }
+
+            .carousel-track {
+                transition: none;
+            }
+        }
+
+        /* ─── MOBILE ─── */
+
+        @media (max-width: 900px) {
+            :root {
+                --side-gutter: 24px;
+            }
+
+            .nav-inner {
+                padding-top: 16px;
+                padding-bottom: 16px;
+                grid-template-columns: 1fr auto;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-contact {
+                font-size: 11px;
+                padding: 8px 12px;
+            }
+
+            header {
+                padding-top: 150px;
+                padding-bottom: 64px;
+            }
+
+            .hero-title {
+                font-size: clamp(54px, 15vw, 86px);
+            }
+
+            .hero-description {
+                font-size: 17px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .hero-actions .btn-primary,
+            .hero-actions .btn-secondary {
+                text-align: center;
+                width: 100%;
+            }
+
+            .section,
+            #xr-playground {
+                padding-top: 80px;
+                padding-bottom: 80px;
+            }
+
+            .curriculum-grid,
+            .case-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .training-card,
+            .curriculum-card,
+            .case-card {
+                padding: 28px;
+            }
+
+            .host-grid {
+                grid-template-columns: 1fr;
+                gap: 42px;
+            }
+
+            .xr-frame-wrapper {
+                height: 450px;
+            }
+
+            .case-video-wrapper {
+                margin-top: 42px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-copy {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .nav-contact {
+                display: inline-block;
+                font-size: 10px;
+                padding: 7px 10px;
+            }
+
+            .section-label {
+                margin-bottom: 34px;
+            }
+
+            .training-card,
+            .curriculum-card,
+            .case-card {
+                padding: 24px;
+            }
+
+            .xr-frame-wrapper {
+                height: 400px;
+            }
+
+            .mute-btn {
+                right: 10px;
+                bottom: 10px;
+            }
+
+            .carousel-controls {
+                gap: 10px;
+            }
+        }
+
+        /* ─── TEMPORARY TRAINING VIDEO ─── */
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: var(--black-pure);
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .video-wrapper video {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav aria-label="Primary navigation">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo" aria-label="AMPL Labs home">AMPL Labs</a>
+
+            <ul class="nav-links">
+                <li><a href="#opportunity">Opportunity</a></li>
+                <li><a href="#training">Curriculum</a></li>
+                <li><a href="#xr-playground">XR Playground</a></li>
+                <li><a href="#case-study">Case Study</a></li>
+                <li><a href="#contact">For Teams</a></li>
+            </ul>
+
+            <a href="mailto:hi@mayowatomori.com?subject=Interested%20in%20Digital%20Collections%20Intensive&body=Can%20you%20send%20me%20more%20information%3F" class="nav-contact">
+                Sign Me Up!
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header>
+        <div class="hero-bg" aria-hidden="true">
+            <div class="hero-bg-img"></div>
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="container hero-content">
+            <p class="eyebrow hero-eyebrow reveal">
+                Remote or In-Person Training
+            </p>
+
+            <h1 class="hero-title reveal delay-1">
+                <span class="accent">Decolonizing</span>
+                Digital <br>Collections & Archives
+            </h1>
+
+            <p class="hero-description reveal delay-2">
+                A professional intensive for artists and archivists focused on using emerging technology, mixed reality and creating virtual museums.
+            </p>
+
+            <div class="hero-actions reveal delay-3">
+                <a href="mailto:hi@mayowatomori.com?subject=Interested%20in%20Digital%20Collections%20Intensive&body=Can%20you%20send%20me%20more%20information%3F" class="btn-primary">
+                    Sign Me Up!
+                </a>
+
+                <a href="#contact" class="btn-secondary">
+                    For Teams
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- OPPORTUNITY -->
+    <section id="opportunity" class="section">
+        <div class="container">
+
+            <div class="section-label">
+                The Opportunity
+            </div>
+
+            <div class="opportunity-intro fade-up">
+                <h2>
+                    Shape The Future of Digital Cultural Heritage
+                </h2>
+
+                <p>
+                    Join AMPL Labs for a digital cultural heritage
+                    professional development intensive for artists interested in working
+                    with communities and cultural institutions.
+                </p>
+
+                <p>
+                    The intensive will focus on using accessible 3D scanning technology
+                    and open-source digital collections to create virtual museums, apps and media for preserving and protecting
+                    cultural knowledge. We'll also explore how emergent technologies can be used for innovative cultural collaboration with vulnerable communities.
+                </p>
+
+                <div class="video-wrapper opportunity-video fade-up">
+                    <video
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                        aria-label="Examples of what artists can create with digital collections and 3D archiving">
+                        <source src="assets/images/hero-video.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+            </div>
+
+            <div class="training-card fade-up">
+                <h3>Designed and Led by Working Artists</h3>
+                <p>
+                    This training is offered by <strong>Mayowa Tomori</strong> (Award-Winning Nigerian-American artist), with additional content provided by <strong>Claudia Miranda</strong> (Mexican-American 3D developer), <strong>Olivia Cueva</strong> (design technologist) and <strong>Monica Silva Lovato</strong> (Indigenous creative
+                    technologist from San Felipe / Santo Domingo).
+                </p>
+                <p> 
+                    Together, they will talk about how they use emerging technology to empower cultural researchers in vulnerable communities and decolonize cultural institutions.
+                </p> 
+                <p>
+                    Participants will also learn about:
+                </p>
+
+                <br>
+
+                <ul class="training-list">
+                    <li>
+                        <strong>3D Scanning:</strong>
+                        Step-by-step hands-on training on creating high-fidelity 3D models for archives.
+                    </li>
+
+                    <li>
+                        <strong>Virtual Museum Technology:</strong>
+                        Tips for integrating 3D content and metadata into databases and archives using Smithsonian
+                        Voyager, Murkutu CMS and other open-source tools.
+                    </li>
+
+                    <li>
+                        <strong>Activating Collections:</strong>
+                        Creative tips for artists and researchers looking to adapt and activate archival content in their practice.
+                    </li>
+
+                    <li>
+                        <strong>Ethics &amp; Collaborating with Institutions:</strong>
+                        Practical guides for minimizing harm, taking care of your team, and supporting vulnerable communites while
+                        working with sensitive collections.
+                    </li>
+
+                    <li>
+                        <strong>Funding Strategy:</strong>
+                        How to build sustainable business partnerships with cultural
+                        institutions, and fund collaborative research using public and private sources.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ORIGINAL TRAINING SECTION -->
+    <section id="training" class="section">
+        <div class="container">
+
+            <div class="section-label">
+                The Training
+            </div>
+
+            <div class="xr-heading fade-up">
+
+                <h2 class="section-headline">
+                    Workshop Curriculum
+                </h2>
+
+                <p>
+                    The intensive will give you the technical skills for leading <strong>3D and XR</strong> archival research and creative projects in cultural institutions. We can also adapt the curriculum to fit your unique use-case or project.
+                </p>
+            </div>
+            
+
+            <div class="curriculum-grid">
+
+                <article class="curriculum-card fade-up">
+                    <span class="card-number">01: Foundation</span>
+
+                    <h3>Digitizating Objects in 3D</h3>
+
+                    <p>
+                        This module covers <strong>use-cases for 3D/AR</strong> in cultural institutions and includes a hands-on <strong>photogrammetry</strong> intensive with a partner cultural institution or private archivist.
+                    </p>
+                </article>                
+
+                <article class="curriculum-card fade-up">
+                    <span class="card-number">02: Implementation</span>
+
+                    <h3>Digital Publishing</h3>
+
+                    <p>
+                        Learn how to create interactive, web-based <strong>3D & AR</strong> experiences that are mobile-friendly and accessible. We also show you how to integrate 3D content into games, apps and <strong>New Media applications</strong>.
+                    </p>
+                </article>
+
+                <article class="curriculum-card fade-up">
+                    <span class="card-number">03: Expression & Exploration</span>
+
+                    <h3>Collaborative Worldbuilding</h3>
+
+                    <p>
+                        Explore how that 3D spaces can be used for <strong>Community Collaboration</strong> and self-expression.
+                    </p>
+                </article>
+
+                <article class="curriculum-card fade-up">
+                    <span class="card-number">04: Innovation</span>
+
+                    <h3>Speculative Digital Futures</h3>
+
+                    <p>
+                        Dream up emergent, decolonial and <strong>restorative uses</strong> for digital cultural heritage and archives.
+                    </p>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TRAINING VIDEO -->
+    
+    <!-- <section class="section">
+        <div class="video-wrapper fade-up">
+            <video
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-label="Examples of what artists can create with digital collections and 3D archiving">
+                <source src="assets/images/hero-video.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section> -->
+
+
+    <!-- CURRICULUM -->
+   <!--  <section id="training" class="section">
+        <div class="section-label fade-up">
+            Curriculum
+        </div>
+
+        <div class="curriculum-grid">
+             <h2>Designed and Led by Artists</h2>
+        </div>
+        <p>
+                    This training is offered by award-winning artist
+                    <strong>Mayowa Tomori</strong> (AMPL Labs) and Indigenous creative
+                    technologist <strong>Monica Silva Lovato</strong> and will cover technical and creative content, including:
+                </p>
+            <div class="curriculum-card fade-up">
+                <span class="card-number">01</span>
+
+                <h3>Digital Archiving</h3>
+
+                <p>
+                    Learn practical approaches to documenting, organizing and preserving
+                    digital cultural materials for long-term access and use.
+                </p>
+            </div>
+
+            <div class="curriculum-card fade-up">
+                <span class="card-number">02</span>
+
+                <h3>3D Scanning &amp; Photogrammetry</h3>
+
+                <p>
+                    Explore accessible techniques for capturing physical objects,
+                    spaces and materials as high-resolution 3D digital assets.
+                </p>
+            </div>
+
+            <div class="curriculum-card fade-up">
+                <span class="card-number">03</span>
+
+                <h3>Cultural Sovereignty</h3>
+
+                <p>
+                    Consider who controls cultural data, how digital collections are
+                    shared, and how artists can build more ethical archival systems.
+                </p>
+            </div>
+
+            <div class="curriculum-card fade-up">
+                <span class="card-number">04</span>
+
+                <h3>Restorative Infrastructure</h3>
+
+                <p>
+                    Develop workflows that connect digital preservation with community
+                    knowledge, creative practice and long-term cultural stewardship.
+                </p>
+            </div>
+
+        </div>
+    </section> -->
+
+    <!-- XR PLAYGROUND -->
+    <section id="xr-playground">
+        <div class="container">
+
+            <div class="section-label">
+                Try It Yourself
+            </div>
+
+            <div class="xr-heading fade-up">
+                <h2>The XR Playground</h2>
+
+                <p>
+                    Experience 3D and mixed reality created by training participants and partner institutions using your mobile device (or headset).
+                </p>
+            </div>
+
+            <div class="carousel-container">
+                <div
+                    class="carousel-track"
+                    id="track"
+                    aria-live="polite">
+
+                    <!-- VESSEL -->
+                    <article
+                        class="carousel-item"
+                        data-slide="0"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="1 of 3: IAIA Vessel Prototype">
+
+                        <div class="xr-frame-wrapper">
+                            <model-viewer
+                                src="assets/models/vessel.glb"
+                                ios-src="assets/models/vessel.usdz"
+                                poster="assets/models/vessel.webp"
+                                alt="3D model of an IAIA vessel prototype"
+                                ar
+                                camera-orbit="-113.7deg 79.24deg 0.8135m"
+                                auto-rotate
+                                shadow-intensity="1"
+                                interaction-prompt="none"
+                                touch-action="pan-y">
+
+                                <button
+                                    slot="ar-button"
+                                    class="ar-button"
+                                    type="button">
+                                    View in My Space
+                                </button>
+                            </model-viewer>
+                        </div>
+
+                        <p class="xr-caption">
+                            Museum of Contemporary Native Art | Vessel
+                        </p>
+                    </article>
+
+                    <!-- ALEBRIJE -->
+                    <article
+                        class="carousel-item"
+                        data-slide="1"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="2 of 3: Alebrije x Dr Michael Lechuga">
+
+                        <div class="xr-frame-wrapper">
+                            <model-viewer
+                                src="assets/models/Alebrije.glb"
+                                ios-src="assets/models/Alebrije.usdz"
+                                poster="assets/models/Alebrije.webp"
+                                alt="3D model of an Alebrije"
+                                ar
+                                camera-controls
+                                camera-orbit="37.56deg 64.34deg 2.165m"
+                                auto-rotate
+                                shadow-intensity="1"
+                                interaction-prompt="none"
+                                touch-action="pan-y">
+
+                                <button
+                                    slot="ar-button"
+                                    class="ar-button"
+                                    type="button">
+                                    View in My Space
+                                </button>
+                            </model-viewer>
+                        </div>
+
+                        <p class="xr-caption">
+                            University of New Mexico | Alebrije Scan x Dr Michael Lechuga
+                        </p>
+                    </article>
+
+                    <!-- BENIN -->
+                    <article
+                        class="carousel-item"
+                        data-slide="2"
+                        role="group"
+                        aria-roledescription="slide"
+                        aria-label="3 of 3: Benin Bronze">
+
+                        <div class="xr-frame-wrapper">
+                            <model-viewer
+                                src="assets/models/kings-head.glb"
+                                ios-src="assets/models/kings-head.usdz"
+                                poster="assets/models/kings-head.webp"
+                                alt="3D model of a Benin bronze king's head"
+                                ar
+                                camera-controls
+                                camera-orbit="-95.81deg 77.07deg 6.106m"
+                                auto-rotate
+                                shadow-intensity="1"
+                                interaction-prompt="none"
+                                touch-action="pan-y">
+
+                                <button
+                                    slot="ar-button"
+                                    class="ar-button"
+                                    type="button">
+                                    View in My Space
+                                </button>
+                            </model-viewer>
+                        </div>
+
+                        <p class="xr-caption">
+                            Frankfurt Weltkulturen Museum | King's Head (Benin Bronze)
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <button
+                    type="button"
+                    class="nav-btn"
+                    id="prev-model"
+                    aria-label="Previous 3D model">
+                    Previous
+                </button>
+
+                <span
+                    class="carousel-status"
+                    id="carousel-status"
+                    aria-live="polite">
+                    1 / 3
+                </span>
+
+                <button
+                    type="button"
+                    class="nav-btn"
+                    id="next-model"
+                    aria-label="Next 3D model">
+                    Next Model
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CASE STUDY -->
+    <section id="case-study" class="section">
+        <div class="container">
+
+            <div class="section-label">
+                Case Study
+            </div>
+
+            <div class="case-intro fade-up">
+                <h2>Casting Memories:<br>Smithsonian x AMPL Labs</h2>
+
+                <p>
+                    In 2022, AMPL Labs led an award-winning collaboration with the
+                    <strong>Smithsonian Institution</strong> and
+                    <strong>Mozilla Foundation</strong> to animate their digital
+                    collections using new forms of storytelling and emerging technology.
+                </p>
+            </div>
+
+            <div class="case-video-wrapper">
+                <iframe
+                    id="case-study-vimeo"
+                    src="https://player.vimeo.com/video/573456472?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
+                    title="Casting Memories: Smithsonian x AMPL Labs"
+                    allow="autoplay; fullscreen"
+                    allowfullscreen>
+                </iframe>
+
+                <button
+                    type="button"
+                    class="mute-btn"
+                    id="vimeo-mute-toggle"
+                    aria-pressed="false">
+                    Unmute Video
+                </button>
+            </div>
+
+            <div class="case-grid">
+
+                <article class="case-card fade-up">
+                    <h3>Cultural Technology for The People</h3>
+
+                    <p>
+                        We defined an accessible 3D-scanning, archiving methodology that
+                        moves away from extractive tech and toward restorative infrastructure.
+                    </p>
+                </article>
+
+                <article class="case-card fade-up">
+                    <h3>Decolonizing the Archive</h3>
+
+                    <p>
+                        We led a reparative process that invited artists, technologists
+                        from impacted communities to participate in the co-design,
+                        co-creation, or destruction of archives held by cultural institutions.
+                    </p>
+                </article>
+
+                <article class="case-card fade-up">
+                    <h3>Innovative Possibilities (I.P.)</h3>
+
+                    <p>
+                        We developed new models for ownership, IP and less-exploitative licensing to make it easier for cultural institutions to work with Nigerian artists, program designers, researchers and communities.
+                    </p>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- HOST INSTITUTION -->
+    <section id="host" class="section">
+        <div class="container">
+
+            <div class="host-grid">
+
+                <div class="host-copy fade-up">
+
+                    <div class="section-label">
+                        The Host
+                    </div>
+
+                    <h2>In Partnership with World-Class Institutions</h2>
+
+                    <p>
+                        The curriculum has been designed with curators and professionals at the Smithsonian Institution, UNESCO, and curators with decades of experience handling sensitive collections. We've also worked with consultants and artists from Indigenous communities and vulnerable populations around the world to make sure our content is more inclusive.
+                    </p>
+                </div>
+
+                <div class="host-image fade-up">
+                    <img
+                        src="assets/images/miac-site.jpg"
+                        alt="Exterior of the Museum of Indian Arts and Culture in Santa Fe, New Mexico"
+                        loading="lazy">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ENROLLMENT -->
+    <!--
+    <section id="enrollment" class="section">
+        <div class="container enrollment-inner">
+
+            <div class="section-label" style="justify-content:center;">
+                Enrollment
+            </div>
+
+            <h2>Funding &amp; Merit Awards</h2>
+
+            <p>
+                Accepted participants receive a
+                <strong class="award">$5,000 In-Kind Merit Award</strong>
+                covering tuition and housing.
+            </p>
+
+            <div class="enrollment-action">
+                <a href="mailto:hi@mayowatomori.com" class="btn-primary">
+                    Apply to The Workshop
+                </a>
+            </div>
+
+        </div>
+    </section>
+    -->
+
+    <!-- CONTACT FORM -->
+    <section id="contact" class="section">
+        <div class="container">
+
+            <div class="section-label">
+                Customized Training
+            </div>
+
+            <div class="contact-heading fade-up">
+                <h2>Professional Development <br>for Teams</h2>
+            </div>
+
+            <div class="contact-grid">
+
+                <p class="contact-lede fade-up">
+                    We offer custom trainings and workshops for curators and archivists looking to adopt 3D scanning, mixed reality and emerging technology at their institutions.
+                </p>
+
+                <div class="fade-up">
+
+                    <form
+                        class="contact-form"
+                        id="contact-form"
+                        action="https://script.google.com/macros/s/AKfycbz5YW1sTJ87NTTBv78ux1gq4RJHif7M7FbdoQEPf6eV1jR_zOkiRKxN004jce-y1zxz/exec"
+                        method="POST"
+                        target="contact-submit-frame"
+                        novalidate
+                    >
+                        <input
+                            type="text"
+                            name="website"
+                            class="hidden-frame"
+                        >
+
+                        <input
+                            type="hidden"
+                            name="source"
+                            value="training-page"
+                        >
+
+                        <input
+                            type="hidden"
+                            name="inquiry_type"
+                            value="team_training_inquiry"
+                        >
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label class="form-label" for="fname">
+                                    Name
+                                </label>
+
+                                <input
+                                    class="form-input"
+                                    type="text"
+                                    id="fname"
+                                    name="name"
+                                    required
+                                    placeholder="Jane Smith"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="forg">
+                                    Organization
+                                </label>
+
+                                <input
+                                    class="form-input"
+                                    type="text"
+                                    id="forg"
+                                    name="organization"
+                                    placeholder="Museum / Org / Studio"
+                                >
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="femail">
+                                Email
+                            </label>
+
+                            <input
+                                class="form-input"
+                                type="email"
+                                id="femail"
+                                name="email"
+                                required
+                                placeholder="you@example.com"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="fmsg">
+                                Tell us a little about your vision
+                            </label>
+
+                            <textarea
+                                class="form-textarea"
+                                id="fmsg"
+                                name="message"
+                                required
+                                placeholder="We're building..."
+                            ></textarea>
+                        </div>
+
+                        <p class="form-privacy">
+                            We use data shared through this form to respond to your inquiry.
+                            We won't ever sell your info.
+                            Learn about our <a href="./privacy.html">Privacy Policy</a>.
+                        </p>
+
+                        <button
+                            class="btn-primary form-submit"
+                            type="submit">
+                            Send Message!
+                        </button>
+
+                        <div id="form-status"></div>
+                    </form>
+
+                    <iframe
+                        name="contact-submit-frame"
+                        class="hidden-frame"
+                        title="Contact form submission">
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+
+            <div>
+                <a
+                    href="https://ampllabs.org/"
+                    class="footer-logo"
+                    aria-label="AMPL Labs home">
+                    AMPL Labs
+                </a>
+
+                <div class="footer-location">
+                    Oakland, CA | Santa Fe, NM
+                </div>
+            </div>
+
+            <!--
+            <div class="footer-copy">
+                &copy; 2026 Mayowa Tomori.
+            </div>
+            -->
+
+        </div>
+    </footer>
+
+    <script>
+        /* ─── VIMEO ─── */
+
+        const iframe = document.getElementById('case-study-vimeo');
+        const muteBtn = document.getElementById('vimeo-mute-toggle');
+
+        let player = null;
+        let isMuted = true;
+
+        if (iframe && typeof Vimeo !== 'undefined') {
+            player = new Vimeo.Player(iframe);
+
+            muteBtn.addEventListener('click', async () => {
+                if (!player) return;
+
+                try {
+                    if (isMuted) {
+                        await player.setVolume(1);
+                        muteBtn.textContent = 'Mute Video';
+                        muteBtn.setAttribute('aria-pressed', 'true');
+                        isMuted = false;
+                    } else {
+                        await player.setVolume(0);
+                        muteBtn.textContent = 'Unmute Video';
+                        muteBtn.setAttribute('aria-pressed', 'false');
+                        isMuted = true;
+                    }
+                } catch (error) {
+                    console.error('Unable to change Vimeo volume:', error);
+                }
+            });
+        }
+
+        /* ─── CAROUSEL ─── */
+
+        const track = document.getElementById('track');
+        const items = Array.from(document.querySelectorAll('.carousel-item'));
+        const nextButton = document.getElementById('next-model');
+        const prevButton = document.getElementById('prev-model');
+        const status = document.getElementById('carousel-status');
+
+        let currentIndex = 0;
+
+        function updateCarousel(announce = false) {
+            if (!track || !items.length) return;
+
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            items.forEach((item, index) => {
+                const isActive = index === currentIndex;
+
+                item.setAttribute('aria-hidden', String(!isActive));
+
+                if ('inert' in item) {
+                    item.inert = !isActive;
+                }
+            });
+
+            if (status) {
+                status.textContent = `${currentIndex + 1} / ${items.length}`;
+            }
+        }
+
+        function moveCarousel(direction) {
+            if (!items.length) return;
+
+            currentIndex =
+                (currentIndex + direction + items.length) % items.length;
+
+            updateCarousel(true);
+        }
+
+        nextButton?.addEventListener('click', () => {
+            moveCarousel(1);
+        });
+
+        prevButton?.addEventListener('click', () => {
+            moveCarousel(-1);
+        });
+
+        updateCarousel(false);
+
+        /* ─── REVEAL ON SCROLL ─── */
+
+        const revealItems = document.querySelectorAll('.fade-up');
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry, index) => {
+                        if (!entry.isIntersecting) return;
+
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, index * 60);
+
+                        observer.unobserve(entry.target);
+                    });
+                },
+                {
+                    threshold: 0.08
+                }
+            );
+
+            revealItems.forEach((item) => observer.observe(item));
+        } else {
+            revealItems.forEach((item) => item.classList.add('visible'));
+        }
+
+        /* ─── KEYBOARD CAROUSEL ─── */
+
+        document.addEventListener('keydown', (event) => {
+            const activeElement = document.activeElement;
+
+            if (
+                activeElement &&
+                (
+                    activeElement.tagName === 'INPUT' ||
+                    activeElement.tagName === 'TEXTAREA' ||
+                    activeElement.tagName === 'SELECT'
+                )
+            ) {
+                return;
+            }
+
+            if (event.key === 'ArrowRight') {
+                moveCarousel(1);
+            }
+
+            if (event.key === 'ArrowLeft') {
+                moveCarousel(-1);
+            }
+        });
+
+        /* ─── CONTACT FORM ─── */
+
+        const CONTACT_ENDPOINT = "https://script.google.com/macros/s/AKfycbz5YW1sTJ87NTTBv78ux1gq4RJHif7M7FbdoQEPf6eV1jR_zOkiRKxN004jce-y1zxz/exec";
+
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const form = this;
+            const btn = form.querySelector('button[type="submit"]');
+            const status = document.getElementById('form-status');
+
+            const name = form.querySelector('input[name="name"]').value.trim();
+            const email = form.querySelector('input[name="email"]').value.trim();
+            const message = form.querySelector('textarea[name="message"]').value.trim();
+
+            // Validate required fields
+            if (!name || !email || !message) {
+                status.className = 'error';
+                status.style.display = 'block';
+                status.textContent = 'Please fill out all required fields.';
+                return;
+            }
+
+            // Sending state
+            btn.style.opacity = '0.5';
+            btn.disabled = true;
+
+            status.className = '';
+            status.style.display = 'block';
+            status.textContent = 'Sending...';
+
+            // Submit through the hidden iframe
+            form.submit();
+
+            // Apps Script submission is handled through the iframe,
+            // so show success optimistically after submission.
+            status.className = 'success';
+            status.style.display = 'block';
+            status.textContent = 'Thank you! Mayowa will reach out shortly.';
+
+            form.reset();
+
+            btn.style.opacity = '';
+            btn.disabled = false;
+        });
+    </script>
+
+</body>
+</html>
